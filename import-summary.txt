@@ -1,0 +1,95 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .gitignore
+* ALEDemonstrator_1.apk
+* ALEDemonstrator_10.apk
+* ALEDemonstrator_11.apk
+* ALEDemonstrator_12.apk
+* ALEDemonstrator_13.apk
+* ALEDemonstrator_14.apk
+* ALEDemonstrator_15.apk
+* ALEDemonstrator_16.apk
+* ALEDemonstrator_16a.apk
+* ALEDemonstrator_17.apk
+* ALEDemonstrator_18.apk
+* ALEDemonstrator_19.apk
+* ALEDemonstrator_2.apk
+* ALEDemonstrator_20.apk
+* ALEDemonstrator_21.apk
+* ALEDemonstrator_22.apk
+* ALEDemonstrator_23.apk
+* ALEDemonstrator_3.apk
+* ALEDemonstrator_4.apk
+* ALEDemonstrator_5.apk
+* ALEDemonstrator_6.apk
+* ALEDemonstrator_7.apk
+* ALEDemonstrator_8.apk
+* ALEDemonstrator_9.apk
+* ALE_1 0API-FCS.pdf
+* ale_msg.proto
+* aledemonstrator-keystore
+* ic_launcher-web.png
+* proguard-project.txt
+* protoc
+* schema_Jan_2014.proto
+* schema_Jul_2013.proto
+* schema_May_2014.proto
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+protobuf-java-2.5.0.jar => com.google.protobuf:protobuf-java:2.5.0
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+protobuf-java-2.5.0.jar => version 2.5.0 in com.google.protobuf:protobuf-java:2.5.0
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets
+* libs\jeromq-0.3.0-SNAPSHOT.jar => app\libs\jeromq-0.3.0-SNAPSHOT.jar
+* lint.xml => app\lint.xml
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

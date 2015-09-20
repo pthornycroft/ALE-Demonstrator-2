@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- initial version 1 on 15Jan14 -->
+<!-- new version 2 on 24Jan14 with changes to settings dialog -->
+<!-- new version 3 on 28Jan14 with bugfix for landscape mode -->
+<!-- new version 4 on 03Feb14 with minor bugfixes -->
+<!-- new version 5 on 18Feb14 with bugfix for NPE crash if no Wi-Fi connection -->
+<!-- new version 6 on 22Apr14 with improved settings dialog, scanning added and first-pass fingerprinting with API and iBeacon reports -->
+<!-- new version 7 on 01May14 with fingerprinting and map display features -->
+<!-- new version 8 on 14May14 with configurable port numbers for http and image download and new fingerprint colour options -->
+<!-- new version 9 on 19May14 with several fixes to set scanning interval to 10s, allow disable zmq and clear all data.  Tested fingerprint map. -->
+<!-- new version 10 on 22May14 with single fix for crash on null floorplan initialization -->
+<!-- new version 11 on 06Jun14 with fingerprint timeout set to 120 sec (from 60 sec) -->
+<!-- new version 12 on 17Jun14 with fingerprint map request interval reduced from 60 to 10sec when in survey mode -->
+<!-- new version 13 on 26Jun14 with colour response for fingerprint post -->
+<!-- new version 14 on 06Jul14 with verification function -->
+<!-- new version 15 on 25Jul14 with improved status messages and cleared initial account -->
+<!-- new version 16 on 31Jul14 with toast for geofence crossing -->
+<!-- new version 17 on 06Aug14 with fixed-size squares for location & breadcrumbs -->
+<!-- new version 18 on 18Nov14 with verify function working with http locations when zmq is disabled -->
+<!-- new version 19 on 29Mar15 with cookie login added -->
+<!-- new version 20 on 02Apr15 with revised cert trust logic, move-floor function -->
+<!-- new version 21 on 06Apr15 with bugfix for move-across-floors -->
+<!-- new version 22 on 07Apr15 with bugfix for move-across-floors -->
+<!-- new version 23 on 04Jun15 with bugfix for bitmap download to remove the /api from the URL -->
+<!-- new version 24 on 20Sep15 with error circle drawn for my MAC or target MAC -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.arubanetworks.aledemonstrator"
+    android:versionCode="24"
+    android:versionName="24" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.sensor.compass"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.arubanetworks.aledemonstrator.MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
