@@ -162,17 +162,15 @@ public class ProtobufParsers {
 			String sta_ip_address = "";
 			String hashed_sta_eth_mac = "";
 			String hashed_sta_ip_address = "";
-		
 			sta_eth_mac = LookupTables.byteStringToStringForMac(station.getStaEthMac().getAddr());
 			username = station.getUsername();
 			role = station.getRole();
 			bssid = LookupTables.byteStringToStringForMac(station.getBssid().getAddr());
 			device_type = station.getDeviceType();
-			sta_ip_address = LookupTables.aleStringToIpAddr((LookupTables.byteStringToHexString(station.getStaIpAddress().getAddr())));
+			sta_ip_address = LookupTables.aleStringToIpAddr((LookupTables.byteStringToHexString(station.getStaIpAddress().getAddr())));  // doesn't handle IPv6
 			hashed_sta_eth_mac = LookupTables.byteStringToHexString(station.getHashedStaEthMac());
 			hashed_sta_ip_address = LookupTables.byteStringToHexString((station.getHashedStaIpAddress()));
 			if(hashed_sta_eth_mac.equals("") && sta_eth_mac != null) { hashed_sta_eth_mac = sta_eth_mac; }
-		
 			//Log.v(TAG, "parseAleStation sta_eth_mac _"+sta_eth_mac+"_ hashed_sta_eth_mac _"+hashed_sta_eth_mac+"_ username _"+username+"_ role _"+role+"_ bssid _"+bssid+
 			//		"_ device_type _"+device_type+"_ sta_ip_address _"+sta_ip_address+"_ hashed_sta_ip_address _"+hashed_sta_ip_address+"_");
 			
@@ -248,8 +246,8 @@ public class ProtobufParsers {
 			String hashed_device_mac = "";
 			String app_name = "";
 			if(hashed_device_mac.equals("") && device_mac != null) { hashed_device_mac = device_mac; }
-			client_ip = LookupTables.aleStringToIpAddr((LookupTables.byteStringToHexString(visibility_rec.getClientIp().getAddr())));
-			dest_ip = LookupTables.aleStringToIpAddr((LookupTables.byteStringToHexString(visibility_rec.getDestIp().getAddr())));
+			client_ip = LookupTables.aleStringToIpAddr((LookupTables.byteStringToHexString(visibility_rec.getClientIp().getAddr()))); // doesn't handle IPv6
+			dest_ip = LookupTables.aleStringToIpAddr((LookupTables.byteStringToHexString(visibility_rec.getDestIp().getAddr())));  // doesn't handle IPv6
 			ip_proto = visibility_rec.getIpProto().getNumber();
 			app_id = visibility_rec.getAppId();
 			tx_pkts = visibility_rec.getTxPkts();

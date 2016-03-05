@@ -1,21 +1,16 @@
 package com.arubanetworks.aledemonstrator;
 
-import java.io.BufferedInputStream;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
-import javax.net.ssl.HttpsURLConnection;
-
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
-import android.util.Base64;
 import android.util.Log;
+
+import java.io.BufferedInputStream;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class GetFloorplanAsyncTask extends AsyncTask <String, Integer, Bitmap> {
 	static String TAG = "GetFloorplanAsyncTask";
@@ -109,7 +104,7 @@ public class GetFloorplanAsyncTask extends AsyncTask <String, Integer, Bitmap> {
 			bmOptions.inJustDecodeBounds = true;			
 			BitmapFactory.decodeStream(insImageURL, null, bmOptions);
 			Log.v(TAG, "original image dimensions "+bmOptions.outWidth+"  "+bmOptions.outHeight);
-			bmOptions.inSampleSize = calculateInSampleSize(bmOptions, 1024, 1024);
+			bmOptions.inSampleSize = calculateInSampleSize(bmOptions, 4096, 4096);
 			bmOptions.inJustDecodeBounds = false;
 			insImageURL.close();
 			

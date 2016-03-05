@@ -1,29 +1,17 @@
 package com.arubanetworks.aledemonstrator;
 
+import android.os.AsyncTask;
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.HttpCookie;
-import java.net.HttpURLConnection;
 import java.net.URL;
-import java.security.cert.X509Certificate;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.SSLSession;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
-
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.os.AsyncTask;
-import android.util.Log;
 
 // cookie login Feb15
 public class GetCookieAsyncTask extends AsyncTask <String, Integer, Boolean> {
@@ -56,7 +44,7 @@ public class GetCookieAsyncTask extends AsyncTask <String, Integer, Boolean> {
 				Map<String, List<String>> outMap = connection.getRequestProperties();
 				for(Entry<String, List<String>> entry : outMap.entrySet()) { 
 					for(int i=0; i<entry.getValue().size(); i++){
-						Log.v(TAG, "login transmitted headers "+entry.getKey()+"  "+entry.getValue().get(i));
+//						Log.v(TAG, "login transmitted headers "+entry.getKey()+"  "+entry.getValue().get(i));
 					}
 				}
 							
@@ -72,7 +60,7 @@ public class GetCookieAsyncTask extends AsyncTask <String, Integer, Boolean> {
 					MainActivity.httpStatusString1 = e.toString();
 				}
 				
-				Log.v(TAG, "login responseCode "+connection.getResponseCode()+"  responseMessage "+connection.getResponseMessage()+"  location "+connection.getHeaderField("Location"));
+//				Log.v(TAG, "login responseCode "+connection.getResponseCode()+"  responseMessage "+connection.getResponseMessage()+"  location "+connection.getHeaderField("Location"));
 				
 				// prints the incoming headers for troubleshooting
 				/*Map<String, List<String>> inMap = connection.getHeaderFields();

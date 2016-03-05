@@ -83,29 +83,29 @@
 			android:text="... zmq status ..."/>
    	</LinearLayout>
    	
-    <LinearLayout 
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="35dp"
         android:background="@android:color/black"
         android:orientation="horizontal">
-	    <Button 
+	    <Button
 	        android:id="@+id/pickTargetButton"
 	        android:layout_width="50dp"
 	        android:layout_height="fill_parent"
 	        android:layout_weight="1"
 	        android:background="@drawable/rounded_button"
 	        android:textSize="12sp"
-			android:text="showing all"/>   	
-	    <Button 
+			android:text="showing all"/>
+	    <Button
 	        android:id="@+id/trackHistoryButton"
 	        android:layout_width="50dp"
 	        android:layout_height="fill_parent"
 	        android:layout_weight="1"
 	        android:background="@drawable/rounded_button"
 	        android:textSize="12sp"
-			android:text="not showing history"/>    	
+			android:text="not showing history"/>
 	</LinearLayout>
-		
+
     <com.arubanetworks.aledemonstrator.FloorPlanView 
 		android:id="@+id/FloorPlanView" 
 		android:layout_width="fill_parent" 

@@ -18,6 +18,7 @@ import android.view.View;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 public class FloorPlanView extends View {
@@ -136,7 +137,7 @@ public class FloorPlanView extends View {
 				for(float i=0; i<thisFloor.floor_img_length; i = (i+thisFloor.grid_size)){
 					canvas.drawLine(0, i*scaleFactor, rectWidthInt, i*scaleFactor, myGridPaint);
 				}
-				canvas.drawText("grid "+thisFloor.grid_size+" "+thisFloor.units, 20, -10, myAlePaint);
+				canvas.drawText("grid " + thisFloor.grid_size + " " + thisFloor.units, 20, -10, myAlePaint);
 			}
 			
 			// if we have a fingerprint map, print it as a colour overlay with a bit of transparency
@@ -216,8 +217,8 @@ public class FloorPlanView extends View {
 							if(historyList.get(i).error != 0) {
 								canvas.drawCircle(historyList.get(i).measuredX*scaleFactor, historyList.get(i).measuredY*scaleFactor, historyList.get(i).error*scaleFactor, myMacErrorPaint);
 							}
-							canvas.drawRect(historyList.get(i).measuredX*scaleFactor - 8/mScaleFactor, historyList.get(i).measuredY*scaleFactor - 8/mScaleFactor, 
-									historyList.get(i).measuredX*scaleFactor + 8/mScaleFactor, historyList.get(i).measuredY*scaleFactor + 8/mScaleFactor, myAlePaint);
+							canvas.drawRect(historyList.get(i).measuredX * scaleFactor - 8 / mScaleFactor, historyList.get(i).measuredY * scaleFactor - 8 / mScaleFactor,
+									historyList.get(i).measuredX * scaleFactor + 8 / mScaleFactor, historyList.get(i).measuredY * scaleFactor + 8 / mScaleFactor, myAlePaint);
 						}
 						
 					}
@@ -225,7 +226,7 @@ public class FloorPlanView extends View {
 			}
 			
 			// Draw my ALE position with a red icon, provided we are on this floor
-			if(MainActivity.trackMode != MainActivity.MODE_SURVEY && MainActivity.myFloorId != null && MainActivity.myFloorId.equals(thisFloor.floor_id)){
+			if( MainActivity.myFloorId != null && MainActivity.myFloorId.equals(thisFloor.floor_id)){
 				// Draw the error circle if there's a meaningful error radius
 				if(site_errorAle != 0) {
 					canvas.drawCircle(site_xAle*scaleFactor, site_yAle*scaleFactor, site_errorAle*scaleFactor, myMacErrorPaint);
@@ -247,17 +248,6 @@ public class FloorPlanView extends View {
 					}
 				}
 			}
-			
-			// If in survey mode, draw breadcrumbs for survey points in this run was +-8, trying +-1 because it was obscuring grid square
-			if(MainActivity.trackMode == MainActivity.MODE_SURVEY && MainActivity.floorList != null && MainActivity.floorListIndex != -1 && MainActivity.surveyHistoryList.size() > 0){
-				for(int i=0; i<MainActivity.surveyHistoryList.size(); i++){
-					if(MainActivity.surveyHistoryList.get(i).floorId.equals(MainActivity.floorList.get(MainActivity.floorListIndex).floor_id)){
-						canvas.drawRect(MainActivity.surveyHistoryList.get(i).touchX*scaleFactor - 8/mScaleFactor,  MainActivity.surveyHistoryList.get(i).touchY*scaleFactor - 8/mScaleFactor,
-								MainActivity.surveyHistoryList.get(i).touchX*scaleFactor + 8/mScaleFactor, MainActivity.surveyHistoryList.get(i).touchY*scaleFactor + 8/mScaleFactor, myMacPaint);
-					}
-				}
-			}
-			
 			
 		} else { 
 			// if the bitmap has been reset to null, we just paint the canvas black because the floorplan is invalid
@@ -347,40 +337,28 @@ public class FloorPlanView extends View {
 					if(thisFloor.floor_id.equals(entry.getValue().get(i).floorId)){
 						float distX = Math.abs(entry.getValue().get(i).measuredX*scaleFactor - (lastDownX/mScaleFactor - originX));
 						float distY = Math.abs(entry.getValue().get(i).measuredY*scaleFactor - (lastDownY/mScaleFactor - originY));
-						if(distX < rectWidthInt/50 && distY < rectHeightInt/50){
-							Log.i(TAG, "matchTouchToTarget "+entry.getKey()+" distX_"+distX+" distY_"+distY+" rectWidthInt_"+(rectWidthInt/50)+" rectHeightInt_"+(rectHeightInt/50));
-							if(waitingToTouchTarget){ 
+
+						// how close does the touch have to be to the centre of the square?  And can we scale it with image zoom?
+						// if(distX < rectWidthInt/50 && distY < rectHeightInt/50){
+						if(distX < 30 && distY < 30) {
+							Log.i(TAG, "matchTouchToTarget " + entry.getKey() + " distX_" + distX + " distY_" + distY + " rectWidthInt_" + (rectWidthInt / 50) + " rectHeightInt_" + (rectHeightInt / 50));
+
+							if (waitingToTouchTarget) {
 								MainActivity.targetHashMac = entry.getKey();
-								Log.v(TAG, "set targetHashMac "+entry.getKey());
+								Log.v(TAG, "set targetHashMac " + entry.getKey());
 								MainActivity.showAllMacs = false;
 								MainActivity.waitingToTouchTarget = false;
-								MainActivity.pickTargetButtonText = "showing "+entry.getKey();
+								MainActivity.pickTargetButtonText = "showing " + entry.getKey();
 								MainActivity.pickTargetButton.setText(MainActivity.pickTargetButtonText);
-								MainActivity.zmqFilter[0] = "location/"+entry.getKey();
+								String[] newFilter = {("location/" + entry.getKey().toLowerCase(Locale.US))};
+								MainActivity.startZmq(newFilter);
 								break;
 							}
-							Log.v(TAG, "matchTouchToTarget "+entry.getKey());
-							launchTargetDialog(entry.getKey().toString(), entry.getValue().get(entry.getValue().size()-1).measuredX, entry.getValue().get(entry.getValue().size()-1).measuredY);
-						}		
-					}
-				} catch (Exception e) { Log.e(TAG, "Exception in match touch to target "+e); }
-			}
-		} 
-		
-		else if (MainActivity.trackMode == MainActivity.MODE_SURVEY) {
-			// we want to match the touch to a survey point
-			List<PositionHistoryObject> surveyList = new ArrayList<PositionHistoryObject>(MainActivity.surveyHistoryList);
-				for(int i=0; i<surveyList.size(); i++){
-				// have to check whether the entry is on the same floor
-				try {
-					if(thisFloor.floor_id.equals(surveyList.get(i).floorId)){
-						float distX = Math.abs(surveyList.get(i).touchX*scaleFactor - (lastDownX/mScaleFactor - originX));
-						float distY = Math.abs(surveyList.get(i).touchY*scaleFactor - (lastDownY/mScaleFactor - originY));
-						if(distX < rectWidthInt/50 && distY < rectHeightInt/50){
-							Log.i(TAG, "matchTouchToTarget "+i+" distX_"+distX+" distY_"+distY+" rectWidthInt_"+(rectWidthInt/50)+" rectHeightInt_"+(rectHeightInt/50));
-							launchSurveyTouchDialog(i, surveyList.get(i));
-							break;
-						}		
+
+							if (MainActivity.touchRedSquareForDetails) {
+								launchTargetDialog(entry.getKey().toString(), entry.getValue().get(entry.getValue().size() - 1).measuredX, entry.getValue().get(entry.getValue().size() - 1).measuredY);
+							}
+						}
 					}
 				} catch (Exception e) { Log.e(TAG, "Exception in match touch to target "+e); }
 			}

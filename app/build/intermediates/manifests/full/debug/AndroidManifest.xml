@@ -23,10 +23,11 @@
 <!-- new version 22 on 07Apr15 with bugfix for move-across-floors -->
 <!-- new version 23 on 04Jun15 with bugfix for bitmap download to remove the /api from the URL -->
 <!-- new version 24 on 20Sep15 with error circle drawn for my MAC or target MAC -->
+<!-- new version 25 on Mar15 with reduced image compression, optional red square touch -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.arubanetworks.aledemonstrator"
-    android:versionCode="24"
-    android:versionName="24" >
+    android:versionCode="25"
+    android:versionName="25" >
 
     <uses-sdk
         android:minSdkVersion="11"
@@ -45,8 +46,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 

@@ -1,7 +1,5 @@
 package com.arubanetworks.aledemonstrator;
 
-import android.util.Log;
-
 import com.google.protobuf.ByteString;
 
 public class LookupTables {
@@ -43,8 +41,14 @@ public class LookupTables {
 	}
 	
 	// Parses IP address in dot-numbered format
+	// Weak way of passing through IPv6 addresses
 	public static String aleStringToIpAddr(String in) {
-		if(in == null || in == "") { return ""; }
+		if(in.length() == 32){
+			return in;
+		}
+		if(in == null || in == "") {
+			return "";
+		}
 		long l = Long.parseLong(in, 16);
         return ((l >>  24 ) & 0xFF) + "." +((l >> 16 ) & 0xFF) + "." +((l >> 8 ) & 0xFF) + "." + (l & 0xFF);
     }
