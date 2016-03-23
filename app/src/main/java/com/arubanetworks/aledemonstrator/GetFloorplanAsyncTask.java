@@ -104,7 +104,7 @@ public class GetFloorplanAsyncTask extends AsyncTask <String, Integer, Bitmap> {
 			bmOptions.inJustDecodeBounds = true;			
 			BitmapFactory.decodeStream(insImageURL, null, bmOptions);
 			Log.v(TAG, "original image dimensions "+bmOptions.outWidth+"  "+bmOptions.outHeight);
-			bmOptions.inSampleSize = calculateInSampleSize(bmOptions, 4096, 4096);
+			bmOptions.inSampleSize = calculateInSampleSize(bmOptions, 2048, 2048);
 			bmOptions.inJustDecodeBounds = false;
 			insImageURL.close();
 			

@@ -23,11 +23,14 @@
 <!-- new version 22 on 07Apr15 with bugfix for move-across-floors -->
 <!-- new version 23 on 04Jun15 with bugfix for bitmap download to remove the /api from the URL -->
 <!-- new version 24 on 20Sep15 with error circle drawn for my MAC or target MAC -->
-<!-- new version 25 on Mar15 with reduced image compression, optional red square touch -->
+<!-- new version 25 on 07Mar16 with reduced image compression 1024 -> 4096, optional red square touch -->
+<!-- new version 26 on 10Mar16 with image compression now 4096 -> 1024 -->
+<!-- new version 27 on 10Mar16 with image compression now 1024 -> 2048 -->
+<!-- new version 28 on 23Mar16 with MAC marked on message list -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.arubanetworks.aledemonstrator"
-    android:versionCode="25"
-    android:versionName="25" >
+    android:versionCode="28"
+    android:versionName="28" >
 
     <uses-sdk
         android:minSdkVersion="11"

@@ -678,7 +678,7 @@ public class MainActivity extends Activity {
 			if(moveAcrossFloors) { moveAcrossFloorsString = "enabled"; }
 			String touchRedSquareString = "disabled";
 			if(touchRedSquareForDetails) { touchRedSquareString = "enabled"; }
-			final String[] titles = {"ALE host address  ", "ALE port (8443)  ", "ALE username  ", "ALE password  ", "Scanning ", "Floorplan download port (80)  ",
+			final String[] titles = {"ALE host address  ", "ALE port (443)  ", "ALE username  ", "ALE password  ", "Scanning ", "Floorplan download port (443)  ",
 					"ZMQ publish-subscribe ", "Follow moves across floors ", "Touch red square for details ", "Reset ALE Demonstrator (clear all data)"};
 			final String[] values = {aleHost, alePort, aleUsername, "*password*", scanningEnabledString, floorplanDownloadPort,
 					enableZmqString, moveAcrossFloorsString, touchRedSquareString ,""};

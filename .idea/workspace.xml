@@ -6,332 +6,41 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbac05f3-81de-4409-8a33-796efd234762" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\androidTest\debug\com\arubanetworks\aledemonstrator\test\BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleBuilding.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleCampus.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleFloor.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$access_point$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$access_point$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$access_point$deployment_mode$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$access_point$deployment_mode.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$access_point.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$access_pointOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$application$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$application$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$application.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$applicationOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$building$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$building$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$building.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$buildingOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$campus$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$campus$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$campus.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$campusOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$destination$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$destination$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$destination.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$destinationOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$floor$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$floor$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$floor.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$floorOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofence$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofence$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofence.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofenceOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofence_notify$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofence_notify$Access_point_info$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofence_notify$Access_point_info$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofence_notify$Access_point_info.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofence_notify$Access_point_infoOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofence_notify$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofence_notify$zone_event$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofence_notify$zone_event.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofence_notify.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$geofence_notifyOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$ip_address$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$ip_address$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$ip_address$addr_family$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$ip_address$addr_family.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$ip_address.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$ip_addressOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$location$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$location$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$location$algorithm$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$location$algorithm.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$location.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$locationOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$mac_address$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$mac_address$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$mac_address.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$mac_addressOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$nb_event$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$nb_event$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$nb_event$event_operation$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$nb_event$event_operation.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$nb_event$license_info$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$nb_event$license_info.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$nb_event.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$nb_eventOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$point$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$point$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$point.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$pointOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$presence$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$presence$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$presence.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$presenceOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Access_point_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Access_point_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Access_point_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Access_point_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Application_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Application_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Application_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Application_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Building_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Building_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Building_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Building_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Campus_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Campus_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Campus_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Campus_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Destination_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Destination_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Destination_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Destination_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Floor_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Floor_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Floor_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Floor_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Geofence_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Geofence_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Geofence_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Geofence_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Location_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Location_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Location_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Location_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Presence_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Presence_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Presence_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Presence_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Radio_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Radio_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Radio_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Radio_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Rssi_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Rssi_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Rssi_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Rssi_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Station_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Station_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Station_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Station_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Virtual_access_point_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Virtual_access_point_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Virtual_access_point_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Virtual_access_point_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Visibility_rec_result$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Visibility_rec_result$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Visibility_rec_result.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response$Visibility_rec_resultOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_response.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$query_responseOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$radio$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$radio$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$radio$ht_type$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$radio$ht_type.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$radio$phy_type$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$radio$phy_type.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$radio$radio_mode$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$radio$radio_mode.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$radio.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$radioOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$rssi$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$rssi$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$rssi.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$rssiOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$station$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$station$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$station.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$stationOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$virtual_access_point$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$virtual_access_point$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$virtual_access_point.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$virtual_access_pointOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$visibility_rec$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$visibility_rec$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$visibility_rec$ip_protocol$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$visibility_rec$ip_protocol.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$visibility_rec.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg$visibility_recOrBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\AleMsg.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\BluetoothBeacon.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\BluetoothBeaconScanner$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\BluetoothBeaconScanner$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\BluetoothBeaconScanner$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\BluetoothBeaconScanner.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\CustomVerifier$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\CustomVerifier.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\FingerprintMapPoint.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\FloorPlanView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\FloorPlanView$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\FloorPlanView$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\FloorPlanView$ScaleListener.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\FloorPlanView.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\GetAleDiscoveryAsyncTask.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\GetCookieAsyncTask.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\GetFingerprintMapAsyncTask.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\GetFloorplanAsyncTask.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\GetMyLocationAsyncTask.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\JsonBuilders.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\JsonParsers.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\LookupTables.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$10.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$11.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$3$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$3$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$5$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$5$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$7$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$7$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$7$2$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$7$2$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$7$2$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$7$2$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$7$2$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$7$2$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$7$2$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$7$2$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$7$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\MainActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\PositionHistoryObject.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\PostChunkedDataAsyncTask.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\PostFingerprintAsyncTask.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\ProtobufParsers.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\R$anim.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\R.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\RadioCoverPoint.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\SurveyObject.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\VerifyObject.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\debug\com\arubanetworks\aledemonstrator\ZMQSubscriber.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\BluetoothBeacon.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\BluetoothBeaconScanner$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\BluetoothBeaconScanner$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\BluetoothBeaconScanner$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\BluetoothBeaconScanner.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\GetFingerprintMapAsyncTask.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$11.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$3$1$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$5$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$5$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$7$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$7$2$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$7$2$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$7$2$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$7$2$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$7$2$5.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$7$2$6.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$7$2$7.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$7$2$8.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$7$2$9.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\MainActivity$7$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\PostChunkedDataAsyncTask.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\classes\release\com\arubanetworks\aledemonstrator\PostFingerprintAsyncTask.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\java\com\arubanetworks\aledemonstrator\BluetoothBeacon.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\java\com\arubanetworks\aledemonstrator\BluetoothBeaconScanner.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\java\com\arubanetworks\aledemonstrator\GetFingerprintMapAsyncTask.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\java\com\arubanetworks\aledemonstrator\PostChunkedDataAsyncTask.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\java\com\arubanetworks\aledemonstrator\PostFingerprintAsyncTask.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/BuildConfig.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/BuildConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/FloorPlanView$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/FloorPlanView$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/FloorPlanView$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/FloorPlanView$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/FloorPlanView$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/FloorPlanView$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/FloorPlanView$ScaleListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/FloorPlanView$ScaleListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/FloorPlanView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/FloorPlanView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/GetCookieAsyncTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/GetCookieAsyncTask.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/GetFloorplanAsyncTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/GetFloorplanAsyncTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/GetMyLocationAsyncTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/GetMyLocationAsyncTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/JsonParsers.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/JsonParsers.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/LookupTables.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/LookupTables.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$3$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/ProtobufParsers.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/release/com/arubanetworks/aledemonstrator/ProtobufParsers.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-release-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-release-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/dex/release/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/release/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/release/jeromq-0.3.5-29458a2ab32a9f50c25455a66619d31e5fb426a0.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/release/jeromq-0.3.5-29458a2ab32a9f50c25455a66619d31e5fb426a0.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/release/protobuf-java-2.5.0-89c0fde4774e719a0ac811f7180947d883665c16.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/release/protobuf-java-2.5.0-89c0fde4774e719a0ac811f7180947d883665c16.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-release.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-release.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/release/support-v4-19.1.0-359b1436bd81729beebe22d04e48231a4dd62d7e.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/release/support-v4-19.1.0-359b1436bd81729beebe22d04e48231a4dd62d7e.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/release/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/release/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/arubanetworks/aledemonstrator/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/arubanetworks/aledemonstrator/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/release/com/arubanetworks/aledemonstrator/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/release/com/arubanetworks/aledemonstrator/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/FloorPlanView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/FloorPlanView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/GetCookieAsyncTask.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/GetCookieAsyncTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/GetFloorplanAsyncTask.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/GetFloorplanAsyncTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/GetMyLocationAsyncTask.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/GetMyLocationAsyncTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/LookupTables.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/LookupTables.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/ProtobufParsers.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/ProtobufParsers.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/release/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-release-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-release-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ALEDemonstrator.iws" />
@@ -1808,7 +1517,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/JsonParsers.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/PositionHistoryObject.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/ZMQSubscriber.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/GetCookieAsyncTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/ZMQSubscriber2.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
@@ -1817,6 +1525,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/LookupTables.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/GetFloorplanAsyncTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/GetCookieAsyncTask.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/FloorPlanView.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
@@ -1838,10 +1547,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1358" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1936" />
+    <option name="height" value="1186" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -1866,9 +1575,60 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ALEDemonstrator" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ALEDemonstrator" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ALEDemonstrator" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aledemonstrator" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ALEDemonstrator" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="manifests" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2029,58 +1789,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ALEDemonstrator" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ALEDemonstrator" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ALEDemonstrator" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aledemonstrator" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ALEDemonstrator" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="manifests" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidManifestsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2285,18 +1994,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="1358" y="-8" width="1936" height="1186" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32750243" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32740214" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.319933" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3197279" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39552963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944608" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2304,7 +2013,8 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15885022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09008529" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24878523" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982844" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -2318,7 +2028,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41034102" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3420797" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2337,13 +2046,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/GetCookieAsyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2618,23 +2320,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6562889">
           <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout-land/activity_main.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6724782">
           <caret line="100" column="23" selection-start-line="100" selection-start-column="23" selection-end-line="100" selection-end-column="23" />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/GetMyLocationAsyncTask.java">
@@ -2667,40 +2369,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/GetFloorplanAsyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.2231986">
-          <caret line="106" column="80" selection-start-line="106" selection-start-column="80" selection-end-line="106" selection-end-column="80" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="106" column="77" selection-start-line="106" selection-start-column="77" selection-end-line="106" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/GetCookieAsyncTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="2" selection-start-line="46" selection-start-column="2" selection-end-line="46" selection-end-column="2" />
+        <state vertical-scroll-proportion="-17.758621">
+          <caret line="93" column="62" selection-start-line="93" selection-start-column="62" selection-end-line="93" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/FloorPlanView.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/CustomVerifier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20035149">
-          <caret line="340" column="88" selection-start-line="340" selection-start-column="88" selection-end-line="340" selection-end-column="88" />
+        <state vertical-scroll-proportion="0.3865772">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5711775">
-          <caret line="683" column="81" selection-start-line="683" selection-start-column="81" selection-end-line="683" selection-end-column="81" />
+        <state vertical-scroll-proportion="0.33240223">
+          <caret line="1010" column="31" selection-start-line="1010" selection-start-column="31" selection-end-line="1010" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/arubanetworks/aledemonstrator/FloorPlanView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23660715">
+          <caret line="360" column="65" selection-start-line="360" selection-start-column="65" selection-end-line="360" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2741652">
-          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
-          <folding>
-            <element signature="e#3259#3277#0" expanded="true" />
-            <element signature="e#3438#3456#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.16666667">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
