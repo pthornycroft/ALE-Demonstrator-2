@@ -343,12 +343,22 @@ public class FloorPlanView extends View {
 						if(distX < 30 && distY < 30) {
 							Log.i(TAG, "matchTouchToTarget " + entry.getKey() + " distX_" + distX + " distY_" + distY + " rectWidthInt_" + (rectWidthInt / 50) + " rectHeightInt_" + (rectHeightInt / 50));
 
+							// see if there's a valid mac
+							String mac = "XX:XX:XX:XX:XX:XX";
+							try {
+								mac = entry.getValue().get(0).ethAddr;
+							} catch (Exception e) { Log.e(TAG, "Exception getting MAC "+e); }
+
 							if (waitingToTouchTarget) {
 								MainActivity.targetHashMac = entry.getKey();
 								Log.v(TAG, "set targetHashMac " + entry.getKey());
 								MainActivity.showAllMacs = false;
 								MainActivity.waitingToTouchTarget = false;
-								MainActivity.pickTargetButtonText = "showing " + entry.getKey();
+								if(mac != null && mac.equals("XX:XX:XX:XX:XX:XX") == false && mac.length() == 17) {
+									MainActivity.pickTargetButtonText = "showing " + mac;
+								} else {
+									MainActivity.pickTargetButtonText = "showing " + entry.getKey();
+								}
 								MainActivity.pickTargetButton.setText(MainActivity.pickTargetButtonText);
 								String[] newFilter = {("location/" + entry.getKey().toLowerCase(Locale.US))};
 								MainActivity.startZmq(newFilter);
@@ -356,13 +366,6 @@ public class FloorPlanView extends View {
 							}
 
 							if (MainActivity.touchRedSquareForDetails) {
-
-								// see if there's a valid mac
-								String mac = "XX:XX:XX:XX:XX:XX";
-								try {
-									mac = entry.getValue().get(0).ethAddr;
-								} catch (Exception e) { Log.e(TAG, "Exception getting MAC "+e); }
-
 								launchTargetDialog(entry.getKey().toString(), mac, entry.getValue().get(entry.getValue().size() - 1).measuredX, entry.getValue().get(entry.getValue().size() - 1).measuredY);
 							}
 						}
@@ -374,18 +377,18 @@ public class FloorPlanView extends View {
 	}
 
 	private void launchTargetDialog(String hashed_sta_eth_mac, String sta_eth_mac, float x, float y){
-		String mac = hashed_sta_eth_mac;
-
-		// if we have a good mac, use it
-		if(sta_eth_mac != null && sta_eth_mac.equals("XX:XX:XX:XX:XX:XX") == false && sta_eth_mac.length() == 17) {
-			mac = sta_eth_mac;
-		}
 
 		List<String> list = MainActivity.eventLogMap.get(hashed_sta_eth_mac);
 		CharSequence[] text = list.toArray(new String[0]);
 		AlertDialog.Builder builder = new AlertDialog.Builder(this.getContext());
-		Log.v(TAG, " " + "Events for target at " + x + "  " + y + "   hashMAC _" + hashed_sta_eth_mac + "_ and MAC _" + mac + "_");
-		builder.setTitle("Events for target at "+ String.format("%.2f", x)+"  "+ String.format("%.2f", y)+"\n"+mac+" ");
+		Log.v(TAG, " " + "Events for target at " + x + "  " + y + "   hashMAC _" + hashed_sta_eth_mac + "_ and MAC _" + sta_eth_mac + "_");
+
+		// if we have a good mac, use it
+		if(sta_eth_mac != null && sta_eth_mac.equals("XX:XX:XX:XX:XX:XX") == false && sta_eth_mac.length() == 17) {
+			builder.setTitle("Events for target at " + String.format("%.2f", x) + "  " + String.format("%.2f", y) + "\n" + sta_eth_mac + " ");
+		} else {
+			builder.setTitle("Events for target at " + String.format("%.2f", x) + "  " + String.format("%.2f", y) + "\n" + hashed_sta_eth_mac + " ");
+		}
 		builder.setItems(text, new DialogInterface.OnClickListener() {
 			@Override
 			public void onClick(DialogInterface dialog, int which) {	
