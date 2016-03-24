@@ -170,7 +170,7 @@ public class MainActivity extends Activity {
 
 	String csvEmailAddress = "";
 
-	static CustomVerifier customVerifier = new CustomVerifier();
+//	static CustomVerifier customVerifier = new CustomVerifier();
 	static boolean checkCertBool = false;
 	static boolean blacklistCertBool = false;
 	static String certData = "empty";
@@ -1008,7 +1008,7 @@ public class MainActivity extends Activity {
 
 		CookieHandler.setDefault(cookieManager);
 		cookieManager.setCookiePolicy(CookiePolicy.ACCEPT_ALL);
-		customVerifier.trustAllHosts();
+//		customVerifier.trustAllHosts();
 
 	}
 
@@ -1037,14 +1037,14 @@ public class MainActivity extends Activity {
 	}
 
 	public void showTrustDialog() {
-		Log.d(TAG, "BANG20! show trust dialog with "+certData+"  "+context.toString());
+		Log.d(TAG, "show trust dialog with "+certData+"  "+context.toString());
 		AlertDialog.Builder builder = new AlertDialog.Builder( context );
 		builder.setTitle("Could not verify Server Certificate");
 		builder.setMessage("Click yes to accept this certificate\n"+certData);
 		builder.setCancelable(false);
 		builder.setPositiveButton("Yes",new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog,int id) {
-				Log.d(TAG, "BANG21! ACCEPTED NEW CERT");
+				Log.d(TAG, "accepted new cert");
 				trustedCert = certData;
 				blacklistCertBool = false;
 				checkCertBool = false;
@@ -1054,7 +1054,7 @@ public class MainActivity extends Activity {
 		});
 		builder.setNegativeButton("No",new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface dialog,int id) {
-				Log.d(TAG, "BANG22! REJECTED NEW CERT");
+				Log.d(TAG, "rejected new cert");
 				blacklistCertBool = true;
 				checkCertBool = false;
 				dialog.cancel();
@@ -1107,6 +1107,11 @@ public class MainActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.menu_settings:
+				settingsOnClickListener.onClick(aleHostTextView);
+				break;
+		}
 		switch (item.getItemId()) {
 			case R.id.menu_exit:
 				finish();

@@ -28,10 +28,11 @@
 <!-- new version 27 on 10Mar16 with image compression now 1024 -> 2048 -->
 <!-- new version 28 on 23Mar16 with MAC marked on message list -->
 <!-- new version 29 on 23Mar16 with MAC shown on select target button -->
+<!-- new version 30 on 23Mar16 with settings button and url-encoded credentials for percent sign -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.arubanetworks.aledemonstrator"
-    android:versionCode="29"
-    android:versionName="29" >
+    android:versionCode="30"
+    android:versionName="30" >
 
     <uses-sdk
         android:minSdkVersion="11"

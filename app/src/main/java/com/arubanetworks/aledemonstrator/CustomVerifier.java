@@ -1,14 +1,15 @@
 package com.arubanetworks.aledemonstrator;
 
+import android.util.Log;
+
 import java.security.cert.X509Certificate;
+
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
-
-import android.util.Log;
 
 public class CustomVerifier implements HostnameVerifier {
 	static String TAG = "CustomVerifier";

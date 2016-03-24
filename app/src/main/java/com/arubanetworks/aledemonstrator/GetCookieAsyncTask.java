@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -15,9 +16,10 @@ import javax.net.ssl.HttpsURLConnection;
 
 // cookie login Feb15
 public class GetCookieAsyncTask extends AsyncTask <String, Integer, Boolean> {
-		static String TAG = "GetCookieAsyncTask";
-		static String COOKIE_HEADER = "Set-Cookie";
-		int TIMEOUT_VALUE = 20000;
+	static String TAG = "GetCookieAsyncTask";
+	static String COOKIE_HEADER = "Set-Cookie";
+	int TIMEOUT_VALUE = 20000;
+	CustomVerifier customVerifier = new CustomVerifier();
 		
 		protected Boolean doInBackground(String... params) {
 			Boolean result = false;
@@ -27,32 +29,35 @@ public class GetCookieAsyncTask extends AsyncTask <String, Integer, Boolean> {
 				//CustomVerifier customVerifier = new CustomVerifier();
 				//customVerifier.trustAllHosts();
 				URL url = new URL("https://"+MainActivity.aleHost+":"+MainActivity.alePort+args);
-				String postBody =  "j_username="+MainActivity.aleUsername+"&j_password="+MainActivity.alePassword;
-				Log.v(TAG, "login URL get protocol "+url.getProtocol()+" host "+url.getHost()+" port "+url.getPort()+" file "+url.getFile());
+
+				String postBody =  "j_username="+ URLEncoder.encode(MainActivity.aleUsername, "utf-8") + "&j_password=" + URLEncoder.encode(MainActivity.alePassword, "utf-8");
+				Log.v(TAG, "login URL get protocol " + url.getProtocol() + " host " + url.getHost() + " port " + url.getPort() + " file " + url.getFile());
 				HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
 				connection.setDoInput(true);
 				connection.setDoOutput(true);
-				connection.setHostnameVerifier(MainActivity.customVerifier);
+				customVerifier.trustAllHosts();
+				connection.setHostnameVerifier(customVerifier);
 				connection.setConnectTimeout(TIMEOUT_VALUE);
 				connection.setReadTimeout(TIMEOUT_VALUE);
 				connection.setRequestMethod("POST");
 				connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Linux; Android 4.3; Nexus 7 Build/JWR66D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.111 Safari/537.36");
 				connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+				connection.setRequestProperty("charset", "utf-8");
 				connection.setInstanceFollowRedirects(false);
 
 				// prints the outgoing headers for troubleshooting
-				Map<String, List<String>> outMap = connection.getRequestProperties();
+/*				Map<String, List<String>> outMap = connection.getRequestProperties();
 				for(Entry<String, List<String>> entry : outMap.entrySet()) { 
 					for(int i=0; i<entry.getValue().size(); i++){
-//						Log.v(TAG, "login transmitted headers "+entry.getKey()+"  "+entry.getValue().get(i));
+						Log.v(TAG, "login transmitted headers "+entry.getKey()+"  "+entry.getValue().get(i));
 					}
 				}
-							
+*/
 				connection.connect();
 				
 				try {
 					DataOutputStream dataOutputStream = new DataOutputStream(connection.getOutputStream());
-					dataOutputStream.writeBytes( postBody );    
+					dataOutputStream.writeBytes(postBody);
 					dataOutputStream.flush();
 					dataOutputStream.close();
 				} catch (Exception e) { 
