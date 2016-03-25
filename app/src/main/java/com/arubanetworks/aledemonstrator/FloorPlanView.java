@@ -384,7 +384,7 @@ public class FloorPlanView extends View {
 									MainActivity.pickTargetButtonText = "showing " + entry.getKey();
 								}
 								MainActivity.pickTargetButton.setText(MainActivity.pickTargetButtonText);
-								String[] newFilter = {("location/" + entry.getKey().toLowerCase(Locale.US))};
+								String[] newFilter = {("location/" + entry.getValue().get(0).ethAddr.toLowerCase(Locale.US))};
 								MainActivity.startZmq(newFilter);
 								break;
 							}

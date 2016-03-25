@@ -31,10 +31,10 @@ public class ZMQSubscriber extends Thread {
 	public void run() {
 		try{
 			String target = "all devices";
-			if(zmqFilter[0].contains("location/")) { target = "one device"; }
+			if(zmqFilter[0].contains("location/")) { target = zmqFilter[0].substring(zmqFilter[0].indexOf("/")+1); }
 			String progress = " ";
 			if(!testReachabilityOfServer()) { progress = MainActivity.aleHost+" unreachable"; }
-			else { progress = MainActivity.aleHost+" opened socket "+target; }
+			else { progress = MainActivity.aleHost+" opened socket for "+target; }
 			Log.v(TAG, "ZMQ server "+MainActivity.aleHost+"  "+progress);
 			sendMessage(MainActivity.ZMQ_PROGRESS_MESSAGE, progress.getBytes("UTF-8"));
 

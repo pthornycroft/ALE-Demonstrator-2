@@ -30,12 +30,13 @@
 <!-- new version 29 on 23Mar16 with MAC shown on select target button -->
 <!-- new version 30 on 23Mar16 with settings button and url-encoded credentials for percent sign -->
 <!-- new version 31 on 24Mar16 with bugfix for missing display targets, colours for association, latest protobuf schema -->
+<!-- new version 32 on 25Mar16 with bugfix for ZMQ updates for "touch target" -->
 
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.arubanetworks.aledemonstrator"
-    android:versionCode="31"
-    android:versionName="31" >
+    android:versionCode="32"
+    android:versionName="32" >
 
     <uses-sdk
         android:minSdkVersion="11"
