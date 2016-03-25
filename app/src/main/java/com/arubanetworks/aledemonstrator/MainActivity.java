@@ -298,7 +298,7 @@ public class MainActivity extends Activity {
 */
 //				Log.i(TAG, "zmqStatusString message counter "+zmqMessageCounter);
 				if(zmqMessageCounter > 0) {
-					zmqStatusString = +zmqMessageCounter+" messages, "+zmqMessagesForMyMac+" for my MAC ";
+					zmqStatusString = +zmqMessageCounter+" messages, "+zmqMessagesForMyMac+" for my MAC\ntracking "+aleAllPositionHistoryMap.size()+" devices";
 				}
 
 				if(counter%5 == 1 && scanningEnabled && wifiManager != null){
@@ -659,7 +659,7 @@ public class MainActivity extends Activity {
 		String deviceMfg = Build.MANUFACTURER;
 		String deviceModel = Build.MODEL;
 		return new PositionHistoryObject(date, surveyPointX, surveyPointY, 0, 0, 0, false, 0,
-				floorId, "XXX", "XXX", myMac, "XX", units, deviceMfg, deviceModel, 0, null);
+				floorId, "XXX", "XXX", myMac, "XX", units, deviceMfg, deviceModel, 0, null, true);
 	}
 
 

@@ -26,9 +26,6 @@ enum ht_type {
     HTT_VHT_20MZ = 3;
     HTT_VHT_40MZ = 4;
     HTT_VHT_80MZ = 5;
-    HTT_VHT_160MZ = 6;
-    HTT_VHT_80PLUS80MZ = 7;
-    HTT_INVALID = 8;
 }
  
 // Phy Type
@@ -36,8 +33,6 @@ enum phy_type {
     PHY_TYPE_80211B = 0;  
     PHY_TYPE_80211A = 1; 
     PHY_TYPE_80211G = 2;
-    PHY_TYPE_80211AG = 3;
-    PHY_TYPE_INVALID = 4;
 }
 
 enum measurement_unit {
@@ -180,9 +175,6 @@ message rssi {
         optional uint32 rssi_val = 3;
         optional bool associated = 4;
         optional bytes hashed_sta_eth_mac = 5;
-		optional uint32 noise_floor = 6; // iap
-		optional bool is_ap = 7;
-		optional uint32 age = 8;
 }
 
 message sta_rssi {
@@ -238,8 +230,6 @@ message access_point {
         optional ip_address managed_by = 9;
         optional string managed_by_key = 10;
         repeated radio radios = 11;
-		optional bool is_master = 12; //iap only
-		optional string reboot_reason = 13; // iap only
 
 }
 
@@ -276,8 +266,6 @@ message destination {
 message application {
         optional uint32 app_id = 1;
         optional string app_name = 2;
-        optional string app_family = 3;
-        optional string app_long_name = 4;
 }
 
 message webcc_category {
@@ -298,11 +286,6 @@ message visibility_rec {
              IP_PROTOCOL_VAL_6 = 6;
              IP_PROTOCOL_VAL_17 = 17;
         }
-		enum IapAppEnforcementStatus {
-			ENF_PERMIT = 1;
-			ENF_DENY = 2;
-		}
-
         optional ip_address client_ip = 1;//(iap)
         optional ip_address dest_ip = 2;//(iap)
         optional ip_protocol ip_proto = 3;
@@ -321,7 +304,6 @@ message visibility_rec {
         optional bytes cc_md5 = 16; // Webroot md5 of the webcc_url_prefix
                                     // use this as index into webcc_info
         optional mac_address ap_mac = 17;
-		optional IapAppEnforcementStatus session_flags = 18;
 }
 
 message campus {
@@ -472,10 +454,10 @@ message stats_radio {
 	optional mac_address radio_mac = 27;
 
 	// Trasmitted data in bytes (IAP)
-	optional uint64 tx_data_bytes = 28;
+	optional uint32 tx_data_bytes = 28;
 
 	// recieved data in bytes (IAP)
-	optional uint64 rx_data_bytes = 29;
+	optional uint32 rx_data_bytes = 29;
 
 	// 2.4 or 5 g band (IAP)
 	optional uint32 radio_band = 30;
@@ -580,16 +562,16 @@ message stats_station {
 	optional uint32	speed = 15;
 
 	// Station connected data rate for rec(iap)
-	optional uint64 rx_rate = 16;
+	optional uint32 rx_rate = 16;
 
 	// Station connected data rate for trans(iap)
-	optional uint64 tx_rate = 17;
+	optional uint32 tx_rate = 17;
 
 	// Station traffic passed for rec(iap)
-	optional uint64 rx_data_bytes = 18;
+	optional uint32 rx_data_bytes = 18;
 
 	// Station traffic passed for trans(iap)
-	optional uint64 tx_data_bytes = 19;
+	optional uint32 tx_data_bytes = 19;
 
 	// Number of SSID up or number of VAPs(iap)
 	optional uint32 ssid_up = 20;
@@ -597,28 +579,6 @@ message stats_station {
 	// Number of Rouge seen(iap)
 	// optional uint32 rougue_ap = 21;
 
-	optional bytes hashed_sta_eth_mac = 22;
-
-	// maximum tx rate (iap)
-	optional uint64 max_tx_rate = 23;
-
-	// tx data bytes transmitted (iap)
-	optional uint64 tx_data_bytes_transmitted = 24;
-
-	// tranmission time (iap)
-	optional uint32 tx_time_data = 25;
-
-	// rx time (iap)
-	optional uint32 rx_time_data = 26;
-
-	// station health (iap)
-	optional uint32 sta_client_health = 27;
-
-	// rx retries (iap)
-	optional uint32 rx_retries = 28;
-
-	// tx retries (iap)
-	optional uint32 tx_retries = 29;
 }
 
 message state_station {
@@ -643,35 +603,8 @@ message state_station {
 	// Set security op_mode(iap)
 	optional uint32 security_type = 7;
 
-	optional bytes hashed_sta_eth_mac = 8;
-}
 
-// this is only for IAP
-message uplink_bandwidth {
-        optional ip_address  server_ip = 1;
-        optional uint32      server_port =2;
-        optional ip_address  local_ip =3;
-        optional uint32      local_port = 4;
-		optional mac_address ap_mac = 5;
-		optional string      ap_name=6;
-		optional uint64		 timestamp = 7;
-		optional string      protocol = 8;
-		optional uint32      interval = 9;
-		optional uint32      upstream_bytes = 10;
-		optional uint32      upstream_bandwidth = 11;
-		optional uint32      upstream_retries = 12;
-        optional uint32      downstream_bytes = 13;
-        optional uint32      downstream_bandwidth = 14;
-        optional uint32      downstream_retries = 15;
-        optional uint32      upstream_datagrams = 16;
-        optional uint32      downstream_datagrams = 17;
-        optional string      upstream_jitter = 18;
-        optional string      downstream_jitter = 19;
-        optional uint32      upstream_lost_packets = 20;
-        optional uint32      downstream_lost_packets =21;
-		optional bytes		 hashed_ap_eth_mac = 22;
 }
-
 // AP Neighbor List
 message ap_neighbor_list {
     // AP Neighbor List
@@ -796,19 +729,6 @@ message spectrum_info
     optional uint64 active_time = 11;
 }
 
-message rogue_info {
-	// Mac of Air monitor that heard rogue device
-	optional mac_address monitor_mac = 1;
-
-	// mac of rogue device
-	optional mac_address heard_mac = 2;
-
-	// channel on which air monitor heard rogue device
-	optional uint32 monitor_channel = 3;
-
-	// is rogue device an ap
-	optional uint32 is_ap = 4;
-}
 //General info msg
 message key_value_type {
     optional string key = 1;
@@ -906,9 +826,6 @@ message nb_event {
     	optional state_station state_station = 530;
         optional controller_info controller = 531;
         optional cluster_info cluster = 532;
-		optional uplink_bandwidth uplink_bandwidth = 533;
-		optional iap_client_url iapClientURL = 544;
-		optional rogue_info	rogue_info = 545;
 }
 
 // Query result set
@@ -993,26 +910,4 @@ message query_response {
                  required cluster_info msg = 201;
                  optional uint32 ts = 202;
         }
-}
-
-message iap_client_url {
-	optional iap_message_info info = 1;
-	optional uint64 timestamp = 2;
-	optional mac_address ap_mac = 3;
-	optional url_detail_record url_record = 4;
-}
-
-message url_detail_record {
-	optional ip_address client_ip = 1;
-	optional ip_address dest_ip = 2;
-	optional bytes url = 3;
-	optional uint32 hit_count = 4;
-}
-
-message iap_message_info {
-
-    optional uint32 version = 1; //version of iap request message.
-    optional uint64 sequence = 3; //If this message is the response to a central message, then sequence number should match that in the central message
-    optional bytes guid = 4; //X-Guid, for iap, it's vc key for now.
-    optional string oem_tag = 5; //X-OEM-Tag, currently it's Aruba, for third party, it's oem bytes.
 }

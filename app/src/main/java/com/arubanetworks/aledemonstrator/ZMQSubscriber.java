@@ -30,9 +30,11 @@ public class ZMQSubscriber extends Thread {
 	@Override
 	public void run() {
 		try{
+			String target = "all devices";
+			if(zmqFilter[0].contains("location/")) { target = "one device"; }
 			String progress = " ";
 			if(!testReachabilityOfServer()) { progress = MainActivity.aleHost+" unreachable"; }
-			else { progress = MainActivity.aleHost+" opened socket"; }
+			else { progress = MainActivity.aleHost+" opened socket "+target; }
 			Log.v(TAG, "ZMQ server "+MainActivity.aleHost+"  "+progress);
 			sendMessage(MainActivity.ZMQ_PROGRESS_MESSAGE, progress.getBytes("UTF-8"));
 

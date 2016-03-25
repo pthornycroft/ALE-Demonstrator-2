@@ -23,6 +23,7 @@ public class JsonParsers {
 				float sta_location_x = (float)msgObject.getDouble("sta_location_x");
 				float sta_location_y = (float)msgObject.getDouble("sta_location_y");
 				int error = msgObject.getInt("error_level");
+				boolean associated = msgObject.getBoolean("associated");
 				String floorId = msgObject.getString("floor_id");
 				String buildingId = msgObject.getString("building_id");
 				String campusId = msgObject.getString("campus_id");
@@ -39,7 +40,7 @@ public class JsonParsers {
 					Log.v(TAG, "my mac located hash_mac _"+MainActivity.myHashMac+"_  floor _"+MainActivity.myFloorId+"_");
 
 					PositionHistoryObject newObject = new PositionHistoryObject(new Date(), 0, 0, sta_location_x, sta_location_y, -99, false, error, 
-							floorId, buildingId, campusId, sta_eth_mac, hashed_sta_eth_mac, "ft", "XX", "XX", 0, null);
+							floorId, buildingId, campusId, sta_eth_mac, hashed_sta_eth_mac, "ft", "XX", "XX", 0, null, associated);
 					MainActivity.alePositionHistoryList.add(0, newObject);
 					// added to make the verify feature work with zmq disabled
 					if(MainActivity.zmqEnabled == false && MainActivity.trackMode == MainActivity.MODE_VERIFY) { MainActivity.aleHttpPositionHistoryList.add(0, newObject); }
@@ -51,7 +52,7 @@ public class JsonParsers {
 					MainActivity.targetHashMac = msgObject.getString("hashed_sta_eth_mac");
 					Log.v(TAG, "target mac located hash_mac "+MainActivity.targetHashMac);
 					PositionHistoryObject newObject = new PositionHistoryObject(new Date(), 0, 0, sta_location_x, sta_location_y, -99, false, error, 
-							floorId, buildingId, campusId, sta_eth_mac, hashed_sta_eth_mac, "ft", "XX", "XX", 0, null);
+							floorId, buildingId, campusId, sta_eth_mac, hashed_sta_eth_mac, "ft", "XX", "XX", 0, null, associated);
 					Log.v(TAG, "new positionHistoryObject target Mac eth _"+sta_eth_mac+"_ hash _"+hashed_sta_eth_mac+"_  x_"+sta_location_x+"  y_"+sta_location_y+"  error_"+error+" site "+floorId);
 					if(MainActivity.aleAllPositionHistoryMap.containsKey(hashed_sta_eth_mac)){
 						MainActivity.aleAllPositionHistoryMap.get(hashed_sta_eth_mac).add(newObject);

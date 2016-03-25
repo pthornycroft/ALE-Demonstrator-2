@@ -12,7 +12,7 @@ public class ProtobufParsers {
 	static long zmqLastSeq = 0;
 	static int zmqMissedSeq = 0;
 
-	public static void parseAleMessage(byte[] inp){			
+	public static void parseAleMessage(byte[] inp){
 		try {
 			AleMsg.nb_event event = AleMsg.nb_event.parseFrom(inp);
 			if(event.hasLocation()){ 
@@ -58,10 +58,12 @@ public class ProtobufParsers {
 			String sta_eth_mac = "";
 			String hashed_sta_eth_mac = "";
 			int seqNum = 0;
+			boolean associated = false;
 			
 			sta_location_x = location.getStaLocationX();
 			sta_location_y = location.getStaLocationY();
 			error = location.getErrorLevel();
+			associated = location.getAssociated();
 			floorId = LookupTables.byteStringToHexString(location.getFloorId());
 			buildingId = LookupTables.byteStringToHexString(location.getBuildingId());
 			campusId = LookupTables.byteStringToHexString(location.getCampusId());
@@ -74,7 +76,7 @@ public class ProtobufParsers {
 				MainActivity.site_yAle = sta_location_y;
 				MainActivity.site_errorAle = error;
 				PositionHistoryObject newObject = new PositionHistoryObject(new Date(), 0, 0, sta_location_x, sta_location_y, -99, false, error,
-						floorId, buildingId, campusId, sta_eth_mac, hashed_sta_eth_mac, "ft", "XX", "XX", 0, null);
+						floorId, buildingId, campusId, sta_eth_mac, hashed_sta_eth_mac, "ft", "XX", "XX", 0, null, associated);
 				MainActivity.alePositionHistoryList.add(0, newObject);
 				MainActivity.zmqMessagesForMyMac++;
 			} 
@@ -82,15 +84,16 @@ public class ProtobufParsers {
 			// if the mac or hashmac is the target we are tracking, update the "latest floor id" in case it has switched floors
 			if(hashed_sta_eth_mac.equalsIgnoreCase(MainActivity.targetHashMac) || sta_eth_mac.equalsIgnoreCase(MainActivity.targetHashMac)) {
 				if( !floorId.equals("not found") ) { MainActivity.latestFloorId = floorId; }
+				else { Log.w(TAG, "protobuf location message with floor not found "); }
 			}
 
 			// add the position history object to the device's array in the position hash map
 			PositionHistoryObject newObject = new PositionHistoryObject(new Date(), 0, 0, sta_location_x, sta_location_y, -99, false, error,
-					floorId, buildingId, campusId, sta_eth_mac, hashed_sta_eth_mac, "ft", "XX", "XX", 0, null);
+					floorId, buildingId, campusId, sta_eth_mac, hashed_sta_eth_mac, "ft", "XX", "XX", 0, null, associated);
 			//Log.i(TAG, "new positionHistoryObject showAllMacs eth _"+sta_eth_mac+"_ hash _"+hashed_sta_eth_mac+"_  x_"+sta_location_x+"  y_"+sta_location_y+"  error_"+error+" site "+floorId);
 			if(MainActivity.aleAllPositionHistoryMap.containsKey(hashed_sta_eth_mac) && !floorId.equals("not found") &&
 					MainActivity.floorListIndex != -1 && floorId.equals(MainActivity.floorList.get(MainActivity.floorListIndex).floor_id)){
-				if(MainActivity.aleAllPositionHistoryMap.get(hashed_sta_eth_mac).size() > 20) {  ///
+				if(MainActivity.aleAllPositionHistoryMap.get(hashed_sta_eth_mac).size() > 30) {  ///
 					//Log.w(TAG, "position history array was over 20 "+hashed_sta_eth_mac+"  tracking "+MainActivity.eventLogMap.size()+" targets for events"); ///
 					MainActivity.aleAllPositionHistoryMap.get(hashed_sta_eth_mac).remove(1);
 					MainActivity.aleAllPositionHistoryMap.get(hashed_sta_eth_mac).remove(0); 
@@ -103,7 +106,7 @@ public class ProtobufParsers {
 				MainActivity.aleAllPositionHistoryMap.put(hashed_sta_eth_mac, newList);
 			}
 
-			addToEventLogMap(hashed_sta_eth_mac, "LOCATION x_"+sta_location_x+"_ y_"+sta_location_y+"_");
+			addToEventLogMap(hashed_sta_eth_mac, "LOCATION x_"+sta_location_x+"_ y_"+sta_location_y+"_ ass_"+associated);
 			
 		} catch (Exception e) { 
 			Log.e(TAG, "Exception parsing Location protobuf event "+e);
@@ -147,7 +150,7 @@ public class ProtobufParsers {
 
 			//Log.v(TAG, "parseAleRssi sta_eth_mac _"+sta_eth_mac+"_ hashed_sta_eth_mac _"+hashed_sta_eth_mac+"_ rssi_val _"+rssi_val+"_ radio mac _"+radio_mac+"_ associated _"+associated+"_");
 			
-			addToEventLogMap(hashed_sta_eth_mac, "RSSI radio_mac _"+radio_mac+"_ rssi_val _"+rssi_val+"_");
+			addToEventLogMap(hashed_sta_eth_mac, "RSSI radio_mac _"+radio_mac+"_ rssi_val _"+rssi_val+"_  ass_"+associated);
 
 		} catch (Exception e) { Log.e(TAG, "Exception parsing Rssi protobuf event "+e); } 
 	}
@@ -343,6 +346,8 @@ public class ProtobufParsers {
 			String geofence_name = "";
 			String geofence_id = "";
 			String hashed_sta_eth_mac = "";
+			boolean associated = false;
+			associated = geofence.getAssociated();
 			if(geofence.getGeofenceEvent() == AleMsg.geofence_notify.zone_event.ZONE_OUT) { entered = "Left"; }
 			geofence_name = geofence.getGeofenceName();
 			geofence_id = LookupTables.byteStringToHexString(geofence.getGeofenceId());
@@ -352,7 +357,7 @@ public class ProtobufParsers {
 			
 			Log.d(TAG, "1 parseAleGeofence sta_eth_mac_"+sta_eth_mac+"_ hashed_sta_eth_mac_"+hashed_sta_eth_mac+"_  _"+entered+" name_"+geofence_name+" ID_"+geofence_id+"_  my hashmac_"+MainActivity.myMac+" ID raw_"+geofence.getGeofenceId());
 			
-			addToEventLogMap(hashed_sta_eth_mac, "GEOFENCE_"+entered+" name_"+geofence_name+" ID_"+geofence_id+"_");
+			addToEventLogMap(hashed_sta_eth_mac, "GEOFENCE_"+entered+" name_"+geofence_name+" ID_"+geofence_id+"_ ass_"+associated);
 
 			if(sta_eth_mac.equals(MainActivity.myMac) || hashed_sta_eth_mac.equals(MainActivity.myHashMac)) { ///
 				Log.d(TAG, "2 parseAleGeofence sta_eth_mac_"+sta_eth_mac+"_ hashed_sta_eth_mac_"+hashed_sta_eth_mac+"_  _"+entered+" name_"+geofence_name+" ID_"+

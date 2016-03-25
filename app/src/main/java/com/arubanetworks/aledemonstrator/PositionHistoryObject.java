@@ -27,10 +27,11 @@ public class PositionHistoryObject {
 	String deviceModel = "XX";
 	float compassDegrees = 0;
 	JSONArray iBeaconJsonArray;
+	boolean associated = false;
 	
 	public PositionHistoryObject(Date ts, float touch_X, float touch_Y, float meas_X, float meas_Y, int level, boolean from, int err,
 			String floor, String bldg, String campus, String eth, String hashed, String units, String deviceMfg, String deviceModel, 
-			float compassDegrees, JSONArray ibeaconJsonArray){
+			float compassDegrees, JSONArray ibeaconJsonArray, boolean associated){
 		this.timestamp = ts;
 		this.touchX = touch_X;
 		this.touchY = touch_Y;
@@ -49,6 +50,7 @@ public class PositionHistoryObject {
 		this.deviceModel = deviceModel;
 		this.compassDegrees = compassDegrees;
 		this.iBeaconJsonArray = ibeaconJsonArray;
+		this.associated = associated;
 	}
 	
 	public PositionHistoryObject(Date ts, float touch_X, float touch_Y, float meas_X, float meas_Y){
@@ -73,7 +75,7 @@ public class PositionHistoryObject {
 	public String toString(){
 		String s = "";
 		s = "\nTimestamp " + timestamp + "\nTouched x,y " + touchX + " , " + touchY + "\nMeasured x,y "+measuredX+" , "+measuredY+"\nMax rssi level " + maxRssiLevel +
-				"\nfromALE " + fromALE + "\nerror " + error + "\nfloorId " + floorId + "\nbuildingId " + buildingId +
+				"\nfromALE " + fromALE + "\nassociated "+ associated + "\nerror " + error + "\nfloorId " + floorId + "\nbuildingId " + buildingId +
 				"\ncampusId " + campusId + "\nethAddr " + ethAddr + "\nhashedEth " + hashedEth +
 				"\nunits "+ units + "\ndeviceMfg "+deviceMfg+"\ndeviceModel "+deviceModel+"\ncompassDegrees "+compassDegrees;
 		return s;

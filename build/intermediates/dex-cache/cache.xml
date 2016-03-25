@@ -2,13 +2,6 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\pthornycroft\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\pre-dexed\release\support-v4-19.1.0-359b1436bd81729beebe22d04e48231a4dd62d7e.jar" />
-    </item>
-    <item
         jar="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\libs\jeromq-0.3.5.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -21,6 +14,13 @@
         revision="21.1.2"
         sha1="a10732c76bfacdbd633a7eb0f7968b1059a65dfa">
         <dex dex="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\pre-dexed\release\protobuf-java-2.5.0-89c0fde4774e719a0ac811f7180947d883665c16.jar" />
+    </item>
+    <item
+        jar="C:\Users\pthornycroft\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\build\intermediates\pre-dexed\release\support-v4-19.1.0-359b1436bd81729beebe22d04e48231a4dd62d7e.jar" />
     </item>
 
 </items>

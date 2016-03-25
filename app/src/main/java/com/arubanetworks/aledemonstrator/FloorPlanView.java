@@ -32,7 +32,8 @@ public class FloorPlanView extends View {
 	int rectHeightInt;
 	final Paint myMacPaint = new Paint();
 	final Paint myMacErrorPaint = new Paint();
-	final Paint myAlePaint = new Paint();
+	final Paint myAssociatedAlePaint = new Paint();
+	final Paint myUnassociatedAlePaint = new Paint();
 	final Paint myGridPaint = new Paint();
 	final Paint myMapPaint = new Paint();
 	final Paint myHairlinePaint = new Paint();
@@ -107,10 +108,15 @@ public class FloorPlanView extends View {
 			myMacErrorPaint.setStyle(Paint.Style.FILL);
 			myMacErrorPaint.setStrokeWidth(1);
 
-			myAlePaint.setColor(Color.RED);
-			myAlePaint.setStyle(Paint.Style.FILL);
-			myAlePaint.setStrokeWidth(4);
-			myAlePaint.setTextSize(36);
+			myAssociatedAlePaint.setColor(Color.parseColor("#ff00dd00"));
+			myAssociatedAlePaint.setStyle(Paint.Style.FILL);
+			myAssociatedAlePaint.setStrokeWidth(4);
+			myAssociatedAlePaint.setTextSize(36);
+
+			myUnassociatedAlePaint.setColor(Color.parseColor("#ffdd0000"));
+			myUnassociatedAlePaint.setStyle(Paint.Style.FILL);
+			myUnassociatedAlePaint.setStrokeWidth(4);
+			myUnassociatedAlePaint.setTextSize(36);
 			
 			myGridPaint.setColor(Color.LTGRAY);
 			myGridPaint.setStyle(Paint.Style.STROKE);
@@ -137,7 +143,7 @@ public class FloorPlanView extends View {
 				for(float i=0; i<thisFloor.floor_img_length; i = (i+thisFloor.grid_size)){
 					canvas.drawLine(0, i*scaleFactor, rectWidthInt, i*scaleFactor, myGridPaint);
 				}
-				canvas.drawText("grid " + thisFloor.grid_size + " " + thisFloor.units, 20, -10, myAlePaint);
+				canvas.drawText("grid " + thisFloor.grid_size + " " + thisFloor.units, 20, -10, myUnassociatedAlePaint);
 			}
 			
 			// if we have a fingerprint map, print it as a colour overlay with a bit of transparency
@@ -157,9 +163,13 @@ public class FloorPlanView extends View {
 				myMacPaint.setColor(Color.BLUE);
 			}
 			
-			// paint the MAC address just off the floorplan
+			// paint the MAC address and color key just off the floorplan
 			if (MainActivity.trackMode == MainActivity.MODE_TRACK && MainActivity.myMac != null) {
-				canvas.drawText("MAC "+MainActivity.myMac, 20, -10, myAlePaint);
+				canvas.drawText("MAC "+MainActivity.myMac, 20, -10, myUnassociatedAlePaint);
+				float dist = 20 + myAssociatedAlePaint.measureText("MAC"+MainActivity.myMac) + 30;
+				canvas.drawText("ASSOCIATED", dist, -10, myAssociatedAlePaint);
+				dist = dist + myUnassociatedAlePaint.measureText("ASSOCIATED") + 30;
+				canvas.drawText("UNASSOCIATED", dist, -10, myUnassociatedAlePaint);
 			}
 			
 			// if we are in survey fingerprint mode, put up the gridlines and update the central x,y coordinates
@@ -169,24 +179,32 @@ public class FloorPlanView extends View {
 				MainActivity.surveyPointX = (-originX+(viewWidth/mScaleFactor/2))/scaleFactor;
 				MainActivity.surveyPointY = (-originY+(viewHeight/mScaleFactor/2))/scaleFactor;
 			}
-			
+
+			Paint thisPaint = new Paint(myUnassociatedAlePaint);
+
 			// Draw position and historical track of ALL ALE Positions if option enabled
 			if(MainActivity.trackMode == MainActivity.MODE_TRACK && showAllMacs){
+
 				// iterate over all the MACs we've tracked
 				for(Map.Entry<String, ArrayList<PositionHistoryObject>> entry : MainActivity.aleAllPositionHistoryMap.entrySet()){
+
 					// draw lines joining past positions for this MAC
-					for ( int i = 0; i < entry.getValue().size() -1 ; i++){
-						if(showHistory && entry.getValue().get(i).floorId.equals(thisFloor.floor_id) && entry.getValue().get(i).measuredX > 1){
+					for ( int i = 0; i < entry.getValue().size() ; i++){
+
+						if(entry.getValue().get(i).associated == true) { thisPaint = myAssociatedAlePaint; }
+						else { thisPaint = myUnassociatedAlePaint; }
+
+						if(showHistory && entry.getValue().size() > 1 && i < (entry.getValue().size() -1) && entry.getValue().get(i).floorId.equals(thisFloor.floor_id) && entry.getValue().get(i).measuredX > 1){
 							canvas.drawLine(entry.getValue().get(i).measuredX * scaleFactor, 
 									entry.getValue().get(i).measuredY * scaleFactor,
 									entry.getValue().get(i+1).measuredX * scaleFactor,
 									entry.getValue().get(i+1).measuredY * scaleFactor,
-									myAlePaint);
+									thisPaint);
 						}
 						// if it's the latest entry, draw a square for the current position
-						if(i == (entry.getValue().size()-2) && entry.getValue().get(i+1).floorId.equals(thisFloor.floor_id)){
-							canvas.drawRect(entry.getValue().get(i+1).measuredX*scaleFactor - 8/mScaleFactor, entry.getValue().get(i+1).measuredY*scaleFactor - 8/mScaleFactor, 
-									entry.getValue().get(i+1).measuredX*scaleFactor + 8/mScaleFactor, entry.getValue().get(i+1).measuredY*scaleFactor + 8/mScaleFactor, myAlePaint);
+						if(i == (entry.getValue().size()-1) && entry.getValue().get(i).floorId.equals(thisFloor.floor_id)){
+							canvas.drawRect(entry.getValue().get(i).measuredX*scaleFactor - 8/mScaleFactor, entry.getValue().get(i).measuredY*scaleFactor - 8/mScaleFactor,
+									entry.getValue().get(i).measuredX*scaleFactor + 8/mScaleFactor, entry.getValue().get(i).measuredY*scaleFactor + 8/mScaleFactor, thisPaint);
 						}
 					}
 				}
@@ -199,6 +217,9 @@ public class FloorPlanView extends View {
 				// draw lines joining past positions for this MAC
 				if(historyList != null && historyList.size() > 0){
 					for ( int i = 0; i < historyList.size(); i++){
+
+						if(historyList.get(i).associated == true) { thisPaint = myAssociatedAlePaint; }
+						else { thisPaint = myUnassociatedAlePaint; }
 						
 						// draw lines
 						if(i>0) {
@@ -207,20 +228,23 @@ public class FloorPlanView extends View {
 										historyList.get(i).measuredY * scaleFactor,
 										historyList.get(i-1).measuredX * scaleFactor,
 										historyList.get(i-1).measuredY * scaleFactor,
-										myAlePaint);
+										thisPaint);
 							}
 						}
-						
+
 						// if it's the latest entry, draw a square for the current position
 						if(i == historyList.size()-1 && historyList.get(i).floorId.equals(thisFloor.floor_id)){
+
+							if(historyList.get(i).associated == true) { thisPaint = myAssociatedAlePaint; }
+							else { thisPaint = myUnassociatedAlePaint; }
+
 							// Draw the error circle if there's a meaningful error radius
 							if(historyList.get(i).error != 0) {
 								canvas.drawCircle(historyList.get(i).measuredX*scaleFactor, historyList.get(i).measuredY*scaleFactor, historyList.get(i).error*scaleFactor, myMacErrorPaint);
 							}
 							canvas.drawRect(historyList.get(i).measuredX * scaleFactor - 8 / mScaleFactor, historyList.get(i).measuredY * scaleFactor - 8 / mScaleFactor,
-									historyList.get(i).measuredX * scaleFactor + 8 / mScaleFactor, historyList.get(i).measuredY * scaleFactor + 8 / mScaleFactor, myAlePaint);
+									historyList.get(i).measuredX * scaleFactor + 8 / mScaleFactor, historyList.get(i).measuredY * scaleFactor + 8 / mScaleFactor, thisPaint);
 						}
-						
 					}
 				}
 			}
