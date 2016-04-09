@@ -134,28 +134,19 @@ public class GetFloorplanAsyncTask extends AsyncTask <String, Integer, Bitmap> {
 		}
 		return bmImage;
 	}
-	
-	public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
-    // Raw height and width of image
-    final int height = options.outHeight;
-    final int width = options.outWidth;
-    int inSampleSize = 1;
 
-    if (height > reqHeight || width > reqWidth) {
-
-        final int halfHeight = height / 2;
-        final int halfWidth = width / 2;
-
-        // Calculate the largest inSampleSize value that is a power of 2 and keeps both
-        // height and width larger than the requested height and width.
-        while ((halfHeight / inSampleSize) > reqHeight
-                && (halfWidth / inSampleSize) > reqWidth) {
-            inSampleSize *= 2;
-        }
-    }
-    Log.v(TAG, "calculate sample size "+inSampleSize);
-    return inSampleSize;
-}
+	public static int calculateInSampleSize(BitmapFactory.Options bmOptions, int reqWidth, int reqHeight) {
+		// Raw height and width of image
+		final int width = bmOptions.outWidth;
+		final int height = bmOptions.outHeight;
+		int inSampleSize = 1;
+		while ((width/inSampleSize > reqWidth) || (height/inSampleSize > reqHeight)){
+			inSampleSize = inSampleSize + 1;
+			Log.d(TAG, "calculate sample size in loop "+inSampleSize+"   "+width+"  "+height+"  limits "+reqWidth+" "+reqHeight);
+		}
+		Log.v(TAG, "calculate sample size final " + inSampleSize+"  new dims "+(width/inSampleSize)+"  "+(height/inSampleSize));
+		return inSampleSize;
+	}
 
 	
 	

@@ -679,11 +679,11 @@ public class MainActivity extends Activity {
 			String touchRedSquareString = "disabled";
 			if(touchRedSquareForDetails) { touchRedSquareString = "enabled"; }
 			final String[] titles = {"ALE host address  ", "ALE port (443)  ", "ALE username  ", "ALE password  ", "Scanning ", "Floorplan download port (443)  ",
-					"ZMQ publish-subscribe ", "Follow moves across floors ", "Touch red square for details ", "Reset ALE Demonstrator (clear all data)"};
+					"ZMQ publish-subscribe ", "Follow moves across floors ", "Touch red square for details ", "This device MAC with : ", "Reset ALE Demonstrator (clear all data)"};
 			final String[] values = {aleHost, alePort, aleUsername, "*password*", scanningEnabledString, floorplanDownloadPort,
-					enableZmqString, moveAcrossFloorsString, touchRedSquareString ,""};
+					enableZmqString, moveAcrossFloorsString, touchRedSquareString ,myMac, ""};
 			CharSequence[] targetList = {titles[0]+values[0], titles[1]+values[1], titles[2]+values[2], titles[3]+values[3], titles[4]+values[4], titles[5]+values[5],
-					titles[6]+values[6], titles[7]+values[7], titles[8]+values[8], titles[9]+values[9]};
+					titles[6]+values[6], titles[7]+values[7], titles[8]+values[8], titles[9]+values[9], titles[10]+values[10]};
 			builder1.setPositiveButton("OK", new DialogInterface.OnClickListener(){
 				// this returns from the alert dialog to the main view.
 				@Override
@@ -697,7 +697,7 @@ public class MainActivity extends Activity {
 				@Override
 				public void onClick(DialogInterface dialog, final int which) {
 					// builder2 brings up an alert dialog for each setting depending on which was touched from the builder1 list
-					if(which != 4 && which != 6 && which != 7 && which != 8 && which != 9) {
+					if(which != 4 && which != 6 && which != 7 && which != 8 && which != 10) {
 						final AlertDialog.Builder builder2 = new AlertDialog.Builder(context);
 						final EditText input = new EditText(context);
 						// put the value from the list into this new alert dialog
@@ -739,6 +739,9 @@ public class MainActivity extends Activity {
 //					            	}
 									if(which == 5) floorplanDownloadPort = value.toString();
 									initialiseConfigViews();
+									if(which == 9) myMac = value.toString().toUpperCase(Locale.US);
+									Log.v(TAG, "new myMac "+myMac);
+									saveSharedPreferences();
 								}
 								else { Log.w(TAG, "entered new "+titles[which]+" but it was null"); }
 								settingsOnClickListener.onClick(v);  // this brings back a fresh dialog with the _new_ settings values rather than a new dialog of the old settings
@@ -862,7 +865,7 @@ public class MainActivity extends Activity {
 						alertToShow.getWindow().setSoftInputMode(
 								WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 						alertToShow.show();
-					} else if (which == 9) {
+					} else if (which == 10) {
 						final AlertDialog.Builder builder2 = new AlertDialog.Builder(context);
 						builder2.setTitle("reset ALE Demonstrator");
 						builder2.setNegativeButton("NO", new DialogInterface.OnClickListener() {
@@ -965,6 +968,7 @@ public class MainActivity extends Activity {
 		trustedCert = sharedPreferences.getString("trustedCert", null);
 		targetHashMac = sharedPreferences.getString("targetMac", null);
 		touchRedSquareForDetails = sharedPreferences.getBoolean("touchRedSquareForDetails", false);
+		myMac = sharedPreferences.getString("myMac", null);
 	}
 
 	private void saveSharedPreferences(){
@@ -982,6 +986,7 @@ public class MainActivity extends Activity {
 		editor.putString("trustedCert", trustedCert);
 		editor.putString("targetMac", targetHashMac);
 		editor.putBoolean("touchRedSquareForDetails", touchRedSquareForDetails);
+		editor.putString("myMac", myMac);
 		editor.commit();
 	}
 
@@ -990,7 +995,15 @@ public class MainActivity extends Activity {
 
 		wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
 		WifiInfo wifiInfo = wifiManager.getConnectionInfo();
-		try { myMac = wifiInfo.getMacAddress().toUpperCase(Locale.US); } catch (Exception e) { Log.e(TAG, "Exception getting MAC address "+e); }
+		try {
+			String tempMac = wifiInfo.getMacAddress().toUpperCase(Locale.US);
+			if((myMac == null || (tempMac.length() == 17 && !tempMac.substring(0, 5).equals("02:00")  && (myMac.length() != 17 || myMac.substring(0, 5).equals("02:00"))))) {
+				myMac = tempMac;
+				Log.i(TAG, "writing new myMac from wifiMan _" + tempMac + "_");
+			}
+		} catch (Exception e) {
+			Log.e(TAG, "Exception getting MAC address from wifiMan "+e);
+		}
 
 		String[] newFilter = {("location/"+myMac.toLowerCase(Locale.US))};
 		startZmq(newFilter);

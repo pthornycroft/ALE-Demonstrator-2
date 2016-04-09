@@ -31,10 +31,12 @@
 <!-- new version 30 on 23Mar16 with settings button and url-encoded credentials for percent sign -->
 <!-- new version 31 on 24Mar16 with bugfix for missing display targets, colours for association, latest protobuf schema -->
 <!-- new version 32 on 25Mar16 with bugfix for ZMQ updates for "touch target" -->
+<!-- new version 33 on 29Mar16 with floorplan download compression back to 1024x1024 -->
+<!-- new version 34 on 09Apr16 with setting for own MAC -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.arubanetworks.aledemonstrator"
-    android:versionCode="32"
-    android:versionName="32" >
+    android:versionCode="34"
+    android:versionName="34" >
 
     <uses-sdk
         android:minSdkVersion="11"
