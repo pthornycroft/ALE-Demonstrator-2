@@ -911,9 +911,11 @@ public class MainActivity extends Activity {
 
 	@SuppressLint("SimpleDateFormat")
 	public void emailCsvVerifyFile(){
-		if(verifyHistoryList.size() > 0) {
+		if(verifyHistoryList.size() > 0 || alePositionHistoryList.size() > 0) {
+			ArrayList<Uri> attachments = new ArrayList<Uri>();
+			ArrayList<CharSequence> emailText = new ArrayList<CharSequence>();
 			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy_MMdd_HHmmss");
-			String s = "verify point for "+myMac+",time diff sec,distance diff,true x,true y,last ALE date,last ALE x,last ALE y\n";
+			String s = "verify point for "+myMac+",time diff sec,distance diff,true x,true y,last ALE time,last ALE x,last ALE y\n";
 			for(int i=0; i<verifyHistoryList.size(); i++) {
 				s = s + verifyHistoryList.get(i).toCsv();
 			}
@@ -927,24 +929,50 @@ public class MainActivity extends Activity {
 				bufferedWriter.append(tViewCharSeq);
 				bufferedWriter.flush();
 				bufferedWriter.close();
+				attachments.add(Uri.parse("file://" + logFile.getAbsolutePath()));
+				emailText.add(logFileName + " verify file size " + logFile.length());
+			} catch (IOException e) {
+				Log.e(TAG, "Exception saving csv verify file "+e);
+				Toast.makeText(MainActivity.context, "Could not save csv verify file" + e, Toast.LENGTH_LONG).show();
+			}
+
+			String s2 = "ZMQ location for "+myMac+" time,ALE x,ALE y,associated,error,floor_id\n";
+			if(alePositionHistoryList.size() > 1  ){
+				for ( int i = 0; i < alePositionHistoryList.size(); i++){
+					s2 = s2 + alePositionHistoryList.get(i).toCsv();
+				}
+			}
+			CharSequence tViewCharSeq2 = s2;
+			Log.d(TAG, "sending csv log file \n"+s2);
+			String logFileName2 = new String ("ALE_LogFile_" + simpleDateFormat.format(new Date()) + ".csv");
+			File logFile2 = new File(MainActivity.context.getExternalFilesDir(null), logFileName2);
+			logFile2.setReadable(true);
+			try {
+				BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(logFile2));
+				bufferedWriter.append(tViewCharSeq2);
+				bufferedWriter.flush();
+				bufferedWriter.close();
+				attachments.add(Uri.parse("file://" + logFile2.getAbsolutePath()));
+				emailText.add(logFileName2 + "  log file size " + logFile2.length());
 			} catch (IOException e) {
 				Log.e(TAG, "Exception saving csv log file "+e);
 				Toast.makeText(MainActivity.context, "Could not save csv log file" + e, Toast.LENGTH_LONG).show();
 			}
+
 			try {
-				Log.v(TAG, "Sending log file length "+logFile.length());
-				Intent sendIntent = new Intent(Intent.ACTION_SEND);
+				Log.v(TAG, "Sending verify file length "+logFile.length()+"   log file length "+logFile2.length());
+				Intent sendIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
 				sendIntent.setType("text/plain");
 				if(csvEmailAddress != "") sendIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{csvEmailAddress});
-				sendIntent.putExtra(Intent.EXTRA_SUBJECT, "ALE Verify File Attached");
-				sendIntent.putExtra(Intent.EXTRA_TEXT, logFileName+" file size "+logFile.length());
-				sendIntent.putExtra(Intent.EXTRA_STREAM, Uri.parse("file://"+logFile.getAbsolutePath()));
-				startActivity(Intent.createChooser(sendIntent, "Email:"));
-			} catch (Exception e) { Log.e(TAG, "sending email "+e); }
+				sendIntent.putExtra(Intent.EXTRA_SUBJECT, "ALE Files Attached");
+				sendIntent.putExtra(Intent.EXTRA_TEXT, emailText);
+				sendIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, attachments);
+				startActivity(Intent.createChooser(sendIntent, "Email: "));
+			} catch (Exception e) { Log.e(TAG, "exception sending email files "+e); }
 		}
 		else {
-			Log.w(TAG, "wanted to email csv verify file but the list was empty");
-			Toast.makeText(MainActivity.context, "wanted to email verify file but it was empty", Toast.LENGTH_LONG).show();
+			Log.w(TAG, "wanted to email files but both verify list and position history were empty");
+			Toast.makeText(MainActivity.context, "wanted to email files but all were empty", Toast.LENGTH_LONG).show();
 		}
 	}
 

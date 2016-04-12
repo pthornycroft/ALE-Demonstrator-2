@@ -249,7 +249,7 @@ public class FloorPlanView extends View {
 				}
 			}
 			
-			// Draw my ALE position with a red icon, provided we are on this floor
+			// Draw my ALE position with a blue icon, provided we are on this floor
 			if( MainActivity.myFloorId != null && MainActivity.myFloorId.equals(thisFloor.floor_id)){
 				// Draw the error circle if there's a meaningful error radius
 				if(site_errorAle != 0) {

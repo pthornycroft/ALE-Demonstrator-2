@@ -95,4 +95,11 @@ public class PositionHistoryObject {
 				"\nALE Measured x,y,error "+measuredX+" , "+measuredY+" , "+error;
 		return s;
 	}
+
+	public String toCsv(){
+		String result = "";
+		String aleTime = android.text.format.DateFormat.format("yyyy-MM-dd kk:mm:ss", timestamp).toString();
+		result = result + aleTime + "," + String.format("%.2f",measuredX) + "," + String.format("%.2f",measuredY) + "," + associated + "," + error + "," + floorId +"\n";
+		return result;
+	}
 }
