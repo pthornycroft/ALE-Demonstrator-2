@@ -587,13 +587,14 @@ public class MainActivity extends Activity {
 					Date aleTime = alePositionHistoryList.get(0).timestamp;
 					float measuredX = alePositionHistoryList.get(0).measuredX;
 					float measuredY = alePositionHistoryList.get(0).measuredY;
-					VerifyObject newVerifyObject = new VerifyObject(trueTime, surveyPointX, surveyPointY, aleTime, measuredX, measuredY);
+					String measurementUnits = floorList.get(floorListIndex).units;
+					VerifyObject newVerifyObject = new VerifyObject(trueTime, surveyPointX, surveyPointY, aleTime, measuredX, measuredY, measurementUnits);
 					verifyHistoryList.add(newVerifyObject);
 					float diff = (float)(trueTime.getTime() - aleTime.getTime())/(float)1000;
 					double distDiff = Math.sqrt((surveyPointX - measuredX)*(surveyPointX - measuredX) + (surveyPointY - measuredY)*(surveyPointY - measuredY));
-					Toast toast = Toast.makeText(context, ("add verify point success\n"+String.format("%.2f",surveyPointX)+"  "+String.format("%.2f",surveyPointY)+" error "+String.format("%.2f",distDiff)), Toast.LENGTH_LONG);
+					Toast toast = Toast.makeText(context, ("add verify point success\n"+String.format("%.2f",surveyPointX)+"  "+String.format("%.2f",surveyPointY)+" error "+String.format("%.2f",distDiff))+" "+measurementUnits, Toast.LENGTH_LONG);
 					toast.show();
-					Log.v(TAG, "verify point confirmed "+surveyPointX+","+surveyPointY+"  ale "+measuredX+","+measuredY+"  dist diff "+distDiff+"  time diff "+diff+"  verify hist "+verifyHistoryList.size()+"  position hist "+alePositionHistoryList.size());
+					Log.v(TAG, "verify point confirmed "+surveyPointX+","+surveyPointY+"  ale "+measuredX+","+measuredY+"  dist diff "+distDiff+"  time diff "+diff+"  verify hist "+verifyHistoryList.size()+"  position hist "+alePositionHistoryList.size()+"  units "+measurementUnits);
 				}
 				// added to allow http location to be used for verify if zmq is disabled
 				else if (zmqEnabled == false && aleHttpPositionHistoryList.size() > 0) {
@@ -601,11 +602,12 @@ public class MainActivity extends Activity {
 					Date aleTime = aleHttpPositionHistoryList.get(0).timestamp;
 					float measuredX = aleHttpPositionHistoryList.get(0).measuredX;
 					float measuredY = aleHttpPositionHistoryList.get(0).measuredY;
-					VerifyObject newVerifyObject = new VerifyObject(trueTime, surveyPointX, surveyPointY, aleTime, measuredX, measuredY);
+					String measurementUnits = floorList.get(floorListIndex).units;
+					VerifyObject newVerifyObject = new VerifyObject(trueTime, surveyPointX, surveyPointY, aleTime, measuredX, measuredY, measurementUnits);
 					verifyHistoryList.add(newVerifyObject);
 					//float diff = (float)(trueTime.getTime() - aleTime.getTime())/(float)1000;
 					double distDiff = Math.sqrt((surveyPointX - measuredX)*(surveyPointX - measuredX) + (surveyPointY - measuredY)*(surveyPointY - measuredY));
-					Toast toast = Toast.makeText(context, ("add verify point success\n"+String.format("%.2f",surveyPointX)+"  "+String.format("%.2f",surveyPointY)+" error "+String.format("%.2f",distDiff)), Toast.LENGTH_LONG);
+					Toast toast = Toast.makeText(context, ("add verify point success\n"+String.format("%.2f",surveyPointX)+"  "+String.format("%.2f",surveyPointY)+" error "+String.format("%.2f",distDiff))+" "+measurementUnits, Toast.LENGTH_LONG);
 					toast.show();
 				}
 				else {
@@ -915,7 +917,7 @@ public class MainActivity extends Activity {
 			ArrayList<Uri> attachments = new ArrayList<Uri>();
 			ArrayList<CharSequence> emailText = new ArrayList<CharSequence>();
 			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy_MMdd_HHmmss");
-			String s = "verify point for "+myMac+",time diff sec,distance diff,true x,true y,last ALE time,last ALE x,last ALE y\n";
+			String s = "verify point for "+myMac+",time diff sec,distance diff,true x,true y,last ALE time,last ALE x,last ALE y, units\n";
 			for(int i=0; i<verifyHistoryList.size(); i++) {
 				s = s + verifyHistoryList.get(i).toCsv();
 			}

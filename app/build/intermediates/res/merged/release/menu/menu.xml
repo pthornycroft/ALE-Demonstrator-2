@@ -10,4 +10,3 @@
       android:id="@+id/menu_exit" 
       android:showAsAction="ifRoom"/> 
 </menu>
-<!-- From: file:/C:/Users/pthornycroft/AndroidStudioProjects/ALEDemonstrator/app/src/main/res/menu/menu.xml -->

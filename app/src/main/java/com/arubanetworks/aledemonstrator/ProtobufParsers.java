@@ -59,6 +59,7 @@ public class ProtobufParsers {
 			String hashed_sta_eth_mac = "";
 			int seqNum = 0;
 			boolean associated = false;
+			String units = "ft";
 			
 			sta_location_x = location.getStaLocationX();
 			sta_location_y = location.getStaLocationY();

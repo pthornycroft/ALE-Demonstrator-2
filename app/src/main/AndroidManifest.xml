@@ -34,12 +34,13 @@
 <!-- new version 33 on 29Mar16 with floorplan download compression back to 1024x1024 -->
 <!-- new version 34 on 09Apr16 with setting for own MAC -->
 <!-- new version 35 on 12Apr16 with csv log file for ZMQ locations for target -->
+<!-- new version 36 on 26Apr16 with measurement unit added to verify csv file -->
 
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.arubanetworks.aledemonstrator"
-    android:versionCode="35"
-    android:versionName="35" >
+    android:versionCode="36"
+    android:versionName="36" >
 
     <uses-sdk
         android:minSdkVersion="11"

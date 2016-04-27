@@ -76,6 +76,7 @@ public class FloorPlanView extends View {
 	@Override
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
+		canvas.save();
         if(MainActivity.floorPlan != null && MainActivity.floorList != null && MainActivity.floorList.size() > 0 && 
         		MainActivity.floorListIndex != -1 && MainActivity.floorList.get(MainActivity.floorListIndex) != null){
 	        thisFloor = MainActivity.floorList.get(MainActivity.floorListIndex);
@@ -91,7 +92,6 @@ public class FloorPlanView extends View {
         	viewHeight = this.getHeight();
 
         	// Scale the canvas for pinch-zoom to mScaleFactor
-        	canvas.save();
 			canvas.scale(mScaleFactor, mScaleFactor);
 		
 			// Move the canvas
