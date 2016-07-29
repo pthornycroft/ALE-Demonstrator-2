@@ -1,93 +1,93 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:40:1-77:12
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:41:1-78:12
 	package
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:41:5-48
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:42:5-48
 		INJECTED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:43:5-29
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:44:5-29
 		INJECTED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml
 	android:versionCode
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:42:5-29
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:43:5-29
 		INJECTED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:40:11-69
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:41:11-69
 uses-sdk
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:45:5-47:41
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:46:5-48:41
 	android:targetSdkVersion
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:47:9-38
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:48:9-38
 		INJECTED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:46:9-35
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:47:9-35
 		INJECTED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml
 uses-feature#android.hardware.sensor.accelerometer
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:49:5-99
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:50:5-99
 	android:required
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:49:72-96
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:50:72-96
 	android:name
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:49:19-71
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:50:19-71
 uses-feature#android.hardware.sensor.compass
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:50:5-92
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:51:5-92
 	android:required
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:50:66-90
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:51:66-90
 	android:name
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:50:19-65
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:51:19-65
 uses-feature#android.hardware.bluetooth_le
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:51:5-91
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:52:5-91
 	android:required
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:51:64-88
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:52:64-88
 	android:name
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:51:19-63
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:52:19-63
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:53:5-67
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:54:5-67
 	android:name
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:53:22-64
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:54:22-64
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:54:5-76
-	android:name
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:54:22-73
-uses-permission#android.permission.CHANGE_WIFI_STATE
 ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:55:5-76
 	android:name
 		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:55:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:56:5-76
+	android:name
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:56:22-73
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:56:5-80
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:57:5-80
 	android:name
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:56:22-77
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:57:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:57:5-81
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:58:5-81
 	android:name
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:57:22-78
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:58:22-78
 application
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:60:5-75:19
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:61:5-76:19
 	android:label
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:63:9-41
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:64:9-41
 	android:allowBackup
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:61:9-35
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:62:9-35
 	android:icon
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:62:9-45
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:63:9-45
 	android:theme
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:64:9-40
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:65:9-40
 activity#com.arubanetworks.aledemonstrator.MainActivity
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:65:9-74:20
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:66:9-75:20
 	android:label
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:67:13-45
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:68:13-45
 	android:configChanges
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:68:13-74
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:69:13-74
 	android:name
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:66:13-74
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:67:13-74
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:69:13-73:29
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:70:13-74:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:70:17-69
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:71:17-69
 	android:name
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:70:25-66
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:71:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:72:17-77
+ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:73:17-77
 	android:name
-		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:72:27-74
+		ADDED from C:\Users\pthornycroft\AndroidStudioProjects\ALEDemonstrator\app\src\main\AndroidManifest.xml:73:27-74

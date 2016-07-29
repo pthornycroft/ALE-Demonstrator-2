@@ -12,13 +12,12 @@ import org.zeromq.ZMQException;
 import java.net.InetSocketAddress;
 import java.net.SocketAddress;
 
-//public class ZMQSubscriber implements Runnable {
+
 public class ZMQSubscriber extends Thread {
 	private String TAG = "ZMQSubscriberThread";
 	private final Handler uiThreadHandler;
 	private String[] zmqFilter;
 	final ZContext zContext = new ZContext();
-	//    final ZMQ.Context zContext = ZMQ.context(1);
 	ZMQ.Socket socket;
 
 	public ZMQSubscriber(Handler uiThreadHandler, String[] zmqFilter) {
@@ -26,10 +25,16 @@ public class ZMQSubscriber extends Thread {
 		this.zmqFilter = zmqFilter;
 	}
 
-	@SuppressWarnings("deprecation")
-	@Override
+	private UncaughtExceptionHandler exHandler = new Thread.UncaughtExceptionHandler() {
+		public void uncaughtException(Thread thread, Throwable throwable) {
+			Log.e(TAG, "hit the uncaught exception "+throwable.toString());
+			interrupt();
+		}
+	};
+
 	public void run() {
 		try{
+			setDefaultUncaughtExceptionHandler(exHandler);
 			String target = "all devices";
 			if(zmqFilter[0].contains("location/")) { target = zmqFilter[0].substring(zmqFilter[0].indexOf("/")+1); }
 			String progress = " ";
@@ -48,11 +53,6 @@ public class ZMQSubscriber extends Thread {
 				socket.subscribe(zmqFilter[i].getBytes("UTF-8"));
 				filterString = filterString + zmqFilter[i]+" ";
 			}
-
-//			if(success){
-//				Log.v(TAG, "connected "+connectString+"  filters "+filterString);
-//				sendMessage(MainActivity.ZMQ_PROGRESS_MESSAGE, ("connected "+connectString+"\nfilters "+filterString).getBytes("UTF-8"));
-//			}
 
 			byte[] msg = null;
 

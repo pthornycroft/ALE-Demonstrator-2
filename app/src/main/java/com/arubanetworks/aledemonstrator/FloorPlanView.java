@@ -134,18 +134,20 @@ public class FloorPlanView extends View {
 			
 			canvas.drawBitmap(thisFloorPlan, null, frameRect, null);
 			scaleFactor = (float) (rectHeightInt/thisFloor.floor_img_length);
-			
-			// if we have a grid size, draw a grid superimposed and put a legend at upper left
-			if(MainActivity.trackMode != MainActivity.MODE_TRACK && thisFloor.grid_size > 0){
-				for(float i=0; i<thisFloor.floor_img_width; i = (i+thisFloor.grid_size)){
+
+
+			// draw a grid superimposed and put a legend at upper left
+			if(MainActivity.trackMode != MainActivity.MODE_TRACK ){
+				for(float i=0; i<thisFloor.floor_img_width; i = (i + MainActivity.gridSize)){
 					canvas.drawLine(i*scaleFactor, 0, i*scaleFactor, rectHeightInt, myGridPaint);
 				}
-				for(float i=0; i<thisFloor.floor_img_length; i = (i+thisFloor.grid_size)){
+				for(float i=0; i<thisFloor.floor_img_length; i = (i + MainActivity.gridSize)){
 					canvas.drawLine(0, i*scaleFactor, rectWidthInt, i*scaleFactor, myGridPaint);
 				}
-				canvas.drawText("grid " + thisFloor.grid_size + " " + thisFloor.units, 20, -10, myUnassociatedAlePaint);
+				canvas.drawText("grid " + MainActivity.gridSize + " " + thisFloor.units, 20, -10, myUnassociatedAlePaint);
 			}
-			
+
+
 			// if we have a fingerprint map, print it as a colour overlay with a bit of transparency
 			if(MainActivity.trackMode != MainActivity.MODE_TRACK && thisFloor.grid_size > 0 && thisFloor.fingerprintMapList != null && thisFloor.fingerprintMapList.size() > 0){
 				for (int i=0; i<thisFloor.fingerprintMapList.size(); i++){
@@ -272,6 +274,46 @@ public class FloorPlanView extends View {
 					}
 				}
 			}
+
+
+			// In verify mode, draw historical position points and lines
+			if(MainActivity.trackMode == MainActivity.MODE_VERIFY && MainActivity.showVerifyHistory == true && targetHashMac != null){
+				// iterate over all the MACs we've tracked to find the entry (hash mac) for ours
+				ArrayList<VerifyObject> verifyList = MainActivity.verifyHistoryList;
+				// draw lines joining past positions for this MAC
+				if(verifyList != null && verifyList.size() > 0){
+					for ( int i = 0; i < verifyList.size(); i++){
+
+						// draw lines
+						if(i>0) {
+							if(verifyList.get(i).aleX > 1){
+								canvas.drawLine( (float)verifyList.get(i).aleX * scaleFactor,
+										(float)verifyList.get(i).aleY * scaleFactor,
+										(float)verifyList.get(i-1).aleX * scaleFactor,
+										(float)verifyList.get(i-1).aleY * scaleFactor,
+										myMacPaint);
+							}
+							if(verifyList.get(i).trueX > 1){
+								canvas.drawLine( (float)verifyList.get(i).trueX * scaleFactor,
+										(float)verifyList.get(i).trueY * scaleFactor,
+										(float)verifyList.get(i-1).trueX * scaleFactor,
+										(float)verifyList.get(i-1).trueY * scaleFactor,
+										myUnassociatedAlePaint);
+							}
+						}
+
+						// draw circles at the points that have been measured
+						canvas.drawCircle((float)verifyList.get(i).aleX * scaleFactor / mScaleFactor, (float)verifyList.get(i).aleY * scaleFactor / mScaleFactor, 10, myMacPaint);
+						canvas.drawCircle((float)verifyList.get(i).trueX * scaleFactor / mScaleFactor, (float)verifyList.get(i).trueY * scaleFactor / mScaleFactor, 10, myUnassociatedAlePaint);
+
+					}
+				}
+			}
+
+
+
+
+
 			
 		} else { 
 			// if the bitmap has been reset to null, we just paint the canvas black because the floorplan is invalid

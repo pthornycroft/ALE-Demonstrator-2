@@ -14,7 +14,6 @@ import android.net.Uri;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -132,14 +131,17 @@ public class MainActivity extends Activity {
 	static boolean showHistory = false;
 	static boolean showAllMacs = false;
 	static boolean touchRedSquareForDetails = false;
+	static boolean showVerifyHistory = true;
 
 	static int MODE_TARGET_ALL = 0;
 	static int MODE_TARGET_THIS = 1;
 	static int MODE_TARGET_OTHER = 2;
 	static int targetMode = MODE_TARGET_THIS;
 
+	static float gridSize = 5;
+
 	static boolean waitingToTouchTarget = false;
-	static String touchTargetHashMac = null;
+//	static String touchTargetHashMac = null;
 
 	// this hash map uses hashed mac as key and a list of position history objects as value, for targets matching this floor id
 	static HashMap<String, ArrayList<PositionHistoryObject>> aleAllPositionHistoryMap = new HashMap<String, ArrayList<PositionHistoryObject>>(500);
@@ -274,28 +276,20 @@ public class MainActivity extends Activity {
 
 				floorPlanView.invalidate();
 
-				// checks whether zmqSubscriber is alive and re-starts it if not
-/*				if(counter%7 == 2 && zmqSubscriber == null){
-					zmqMessageCounter = 0;
-					zmqMessagesForMyMac = 0;
-					zmqLastSeq = 0;
-					zmqMissedSeq = 0;
-					// added if statement so we keep history if zmq is disabled
-					if(zmqEnabled == true) {
-						alePositionHistoryList = new ArrayList<PositionHistoryObject>();
+				if(counter%5 == 2 && zmqEnabled == true && ( zmqSubscriber == null || zmqSubscriber.isAlive() == false ) ) {
+					String[] newFilter = zmqFilterAll;
+					if(targetMode == MODE_TARGET_THIS) {
+						newFilter = new String[]{("location/"+myMac.toLowerCase(Locale.US))};
+					} else if (targetMode == MODE_TARGET_OTHER && targetHashMac != null) {
+						newFilter = new String[]{("location/"+targetHashMac.toLowerCase(Locale.US))};
 					}
-					eventLogMap = new HashMap<String, ArrayList<String>>(500);
-
-					if(zmqEnabled) {
-						try{
-							//zmqSubscriber = new ZMQSubscriber(zmqHandler, zmqFilter);
-							zmqSubscriber = new ZMQSubscriber2(zmqHandler, zmqFilter);
-							zmqSubscriber.start();
-							Log.v(TAG, "zmqSubscriber was null, starting with host "+aleHost);
-						} catch (Exception e) { Log.e(TAG, "Exception starting new thread for zmqSubscriber "+e); }
-					}
+					try{
+						zmqSubscriber = new ZMQSubscriber(zmqHandler, newFilter);
+						zmqSubscriber.start();
+						Log.w(TAG, "in main loop,zmqSubscriber was null or not alive so re-starting with filter "+newFilter[0]);
+					} catch (Exception e) { Log.e(TAG, "in main loop, Exception starting uncaught new thread for zmqSubscriber "+e); }
 				}
-*/
+
 //				Log.i(TAG, "zmqStatusString message counter "+zmqMessageCounter);
 				if(zmqMessageCounter > 0) {
 					zmqStatusString = +zmqMessageCounter+" messages, "+zmqMessagesForMyMac+" for my MAC\ntracking "+aleAllPositionHistoryMap.size()+" devices";
@@ -320,6 +314,7 @@ public class MainActivity extends Activity {
 				String progress = new String(msg.getData().getByteArray(ZMQ_PROGRESS_MESSAGE), "UTF-8");
 				if(progress.contains("Closed")) {
 					progress = "socket closed";
+					Log.d(TAG, "socket was closed ");
 				}
 				zmqStatusString = progress;
 				//Log.v(TAG, "the zmq message was a progress message... "+progress);
@@ -626,7 +621,7 @@ public class MainActivity extends Activity {
 	};
 
 	// when we get the response to the add survey point post, success or not, we take actions.  We only add the point to the history list if it was successful.
-	public static void addSurveyPointToList(PositionHistoryObject pho, boolean success){
+/*	public static void addSurveyPointToList(PositionHistoryObject pho, boolean success){
 		if(success == true) {
 			boolean addIt = surveyHistoryList.add(pho);
 			if(addIt == true) {
@@ -663,7 +658,7 @@ public class MainActivity extends Activity {
 		return new PositionHistoryObject(date, surveyPointX, surveyPointY, 0, 0, 0, false, 0,
 				floorId, "XXX", "XXX", myMac, "XX", units, deviceMfg, deviceModel, 0, null, true);
 	}
-
+*/
 
 	private OnClickListener settingsOnClickListener = new OnClickListener(){
 		@Override
@@ -680,12 +675,15 @@ public class MainActivity extends Activity {
 			if(moveAcrossFloors) { moveAcrossFloorsString = "enabled"; }
 			String touchRedSquareString = "disabled";
 			if(touchRedSquareForDetails) { touchRedSquareString = "enabled"; }
+			String showVerifyHistoryString = "disabled";
+			if(showVerifyHistory) { showVerifyHistoryString = "enabled"; }
 			final String[] titles = {"ALE host address  ", "ALE port (443)  ", "ALE username  ", "ALE password  ", "Scanning ", "Floorplan download port (443)  ",
-					"ZMQ publish-subscribe ", "Follow moves across floors ", "Touch red square for details ", "This device MAC with : ", "Reset ALE Demonstrator (clear all data)"};
+					"ZMQ publish-subscribe ", "Follow moves across floors ", "Touch red square for details ", "This device MAC with : ",
+					"Reset ALE Demonstrator (clear all data)", "grid size ", "show verify history "};
 			final String[] values = {aleHost, alePort, aleUsername, "*password*", scanningEnabledString, floorplanDownloadPort,
-					enableZmqString, moveAcrossFloorsString, touchRedSquareString ,myMac, ""};
+					enableZmqString, moveAcrossFloorsString, touchRedSquareString ,myMac, "", String.valueOf(gridSize), showVerifyHistoryString};
 			CharSequence[] targetList = {titles[0]+values[0], titles[1]+values[1], titles[2]+values[2], titles[3]+values[3], titles[4]+values[4], titles[5]+values[5],
-					titles[6]+values[6], titles[7]+values[7], titles[8]+values[8], titles[9]+values[9], titles[10]+values[10]};
+					titles[6]+values[6], titles[7]+values[7], titles[8]+values[8], titles[9]+values[9], titles[10]+values[10], titles[11]+values[11], titles[12]+values[12]};
 			builder1.setPositiveButton("OK", new DialogInterface.OnClickListener(){
 				// this returns from the alert dialog to the main view.
 				@Override
@@ -699,7 +697,7 @@ public class MainActivity extends Activity {
 				@Override
 				public void onClick(DialogInterface dialog, final int which) {
 					// builder2 brings up an alert dialog for each setting depending on which was touched from the builder1 list
-					if(which != 4 && which != 6 && which != 7 && which != 8 && which != 10) {
+					if(which != 4 && which != 6 && which != 7 && which != 8 && which != 10 && which != 12) {
 						final AlertDialog.Builder builder2 = new AlertDialog.Builder(context);
 						final EditText input = new EditText(context);
 						// put the value from the list into this new alert dialog
@@ -743,6 +741,7 @@ public class MainActivity extends Activity {
 									initialiseConfigViews();
 									if(which == 9) myMac = value.toString().toUpperCase(Locale.US);
 									Log.v(TAG, "new myMac "+myMac);
+									if(which == 11) gridSize = Float.parseFloat(value.toString());
 									saveSharedPreferences();
 								}
 								else { Log.w(TAG, "entered new "+titles[which]+" but it was null"); }
@@ -891,6 +890,35 @@ public class MainActivity extends Activity {
 						alertToShow.getWindow().setSoftInputMode(
 								WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 						alertToShow.show();
+					} else if (which == 12) {
+						final AlertDialog.Builder builder2 = new AlertDialog.Builder(context);
+						builder2.setTitle("show verify history");
+						builder2.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int whichButton) {
+								// read the new value for show verify history
+								Log.v(TAG, "set show verify history to false");
+								showVerifyHistory = false;
+								initialiseZmqAndOthers();
+								initialiseConfigViews();
+								settingsOnClickListener.onClick(v);
+							}
+						});
+						builder2.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int whichButton) {
+								// read the new value for show verify history
+								Log.v(TAG, "set show verify history to true");
+								showVerifyHistory = true;
+								initialiseZmqAndOthers();
+								initialiseConfigViews();
+								settingsOnClickListener.onClick(v);
+								}
+							}
+						);
+						// this makes sure the keyboard is pulled up and the cursor placed in the settings alert dialog when it appears
+						AlertDialog alertToShow = builder2.create();
+						alertToShow.getWindow().setSoftInputMode(
+								WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
+						alertToShow.show();
 					}
 				}
 			});
@@ -999,6 +1027,8 @@ public class MainActivity extends Activity {
 		targetHashMac = sharedPreferences.getString("targetMac", null);
 		touchRedSquareForDetails = sharedPreferences.getBoolean("touchRedSquareForDetails", false);
 		myMac = sharedPreferences.getString("myMac", null);
+		gridSize = sharedPreferences.getFloat("gridSize", 5);
+		showVerifyHistory = sharedPreferences.getBoolean("showVerifyHistory", true);
 	}
 
 	private void saveSharedPreferences(){
@@ -1017,6 +1047,8 @@ public class MainActivity extends Activity {
 		editor.putString("targetMac", targetHashMac);
 		editor.putBoolean("touchRedSquareForDetails", touchRedSquareForDetails);
 		editor.putString("myMac", myMac);
+		editor.putFloat("gridSize", gridSize);
+		editor.putBoolean("showVerifyHistory", showVerifyHistory);
 		editor.commit();
 	}
 
@@ -1133,7 +1165,7 @@ public class MainActivity extends Activity {
 			showHistory = false;
 			showAllMacs = false;
 			waitingToTouchTarget = false;
-			touchTargetHashMac = null;
+//			touchTargetHashMac = null;
 			trackMode = MODE_TRACK;
 			checkCertBool = false;
 			blacklistCertBool = false;

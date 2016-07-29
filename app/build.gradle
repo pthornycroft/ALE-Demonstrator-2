@@ -21,6 +21,7 @@ android {
 dependencies {
     compile 'com.android.support:support-v4:19.1.0'
     compile 'com.google.protobuf:protobuf-java:2.5.0'
- //   compile files('libs/jeromq-0.3.0-SNAPSHOT.jar')
-    compile files('libs/jeromq-0.3.5.jar')
+    // https://mvnrepository.com/artifact/org.zeromq/jeromq
+    compile group: 'org.zeromq', name: 'jeromq', version: '0.3.5'
+
 }
